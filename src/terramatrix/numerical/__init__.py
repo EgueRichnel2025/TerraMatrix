@@ -5,9 +5,11 @@ from terramatrix.numerical.backend import (
     classify_backend,
     get_numerical_runtime_info,
 )
+from terramatrix.numerical.blas import dgemm
 
 __all__ = [
     "NumericalLibrary",
     "classify_backend",
+    "dgemm",
     "get_numerical_runtime_info",
 ]
