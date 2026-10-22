@@ -60,3 +60,62 @@ def qr_factorization(
         )
 
     return np.asarray(q, dtype=np.float64), np.asarray(r, dtype=np.float64)
+
+
+def svd_factorization(
+    a: ArrayLike,
+) -> tuple[
+    NDArray[np.float64],
+    NDArray[np.float64],
+    NDArray[np.float64],
+]:
+    """Compute an economic SVD using LAPACK GESDD.
+
+    For a matrix A with shape (m, n), return U, s, and Vt such that:
+
+        A approximately equals (U * s) @ Vt
+
+    where k = min(m, n), U has shape (m, k), s has shape (k,),
+    and Vt has shape (k, n).
+
+    The singular values are returned in descending order.
+    This function does not determine numerical rank or choose a
+    pseudoinverse cutoff.
+    """
+    matrix = _as_finite_matrix(a, "a")
+
+    gesdd = get_lapack_funcs(
+        "gesdd",
+        arrays=(matrix,),
+        ilp64="preferred",
+    )
+
+    u, singular_values, vt, info = gesdd(
+        matrix,
+        compute_uv=1,
+        full_matrices=0,
+        overwrite_a=0,
+    )
+
+    if info < 0:
+        raise ValueError(f"LAPACK GESDD rejected argument {-info}.")
+
+    if info > 0:
+        raise np.linalg.LinAlgError(
+            f"LAPACK GESDD failed to converge; INFO={info}."
+        )
+
+    if (
+        not np.isfinite(u).all()
+        or not np.isfinite(singular_values).all()
+        or not np.isfinite(vt).all()
+    ):
+        raise FloatingPointError(
+            "SVD produced non-finite values."
+        )
+
+    return (
+        np.asarray(u, dtype=np.float64),
+        np.asarray(singular_values, dtype=np.float64),
+        np.asarray(vt, dtype=np.float64),
+    )

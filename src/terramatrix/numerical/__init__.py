@@ -6,7 +6,7 @@ from terramatrix.numerical.backend import (
     get_numerical_runtime_info,
 )
 from terramatrix.numerical.blas import dgemm, dgemv, dsyrk
-from terramatrix.numerical.lapack import qr_factorization
+from terramatrix.numerical.lapack import qr_factorization, svd_factorization
 
 __all__ = [
     "NumericalLibrary",
@@ -16,4 +16,5 @@ __all__ = [
     "dsyrk",
     "get_numerical_runtime_info",
     "qr_factorization",
+    "svd_factorization",
 ]
