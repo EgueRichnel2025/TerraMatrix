@@ -119,3 +119,67 @@ def svd_factorization(
         np.asarray(singular_values, dtype=np.float64),
         np.asarray(vt, dtype=np.float64),
     )
+
+
+def symmetric_eigendecomposition(
+    a: ArrayLike,
+) -> tuple[NDArray[np.float64], NDArray[np.float64]]:
+    """Compute a symmetric eigendecomposition using LAPACK SYEVD.
+
+    For a real symmetric matrix A, return its eigenvalues w and
+    eigenvectors V such that:
+
+        A approximately equals V @ diag(w) @ V.T
+
+    Eigenvectors are stored in columns. Eigenvalues are returned
+    in ascending order.
+
+    The input must be square, real, and finite. Small asymmetries
+    within the documented tolerance are removed by symmetrization.
+    This function does not determine numerical rank.
+    """
+    matrix = _as_finite_matrix(a, "a")
+
+    if matrix.shape[0] != matrix.shape[1]:
+        raise ValueError("'a' must be a square matrix.")
+
+    if not np.allclose(
+        matrix,
+        matrix.T,
+        rtol=1e-12,
+        atol=1e-14,
+    ):
+        raise ValueError("'a' must be symmetric.")
+
+    matrix = np.asfortranarray(0.5 * matrix + 0.5 * matrix.T)
+
+    syevd = get_lapack_funcs(
+        "syevd",
+        arrays=(matrix,),
+        ilp64="preferred",
+    )
+
+    eigenvalues, eigenvectors, info = syevd(
+        matrix,
+        compute_v=1,
+        lower=0,
+        overwrite_a=0,
+    )
+
+    if info < 0:
+        raise ValueError(f"LAPACK SYEVD rejected argument {-info}.")
+
+    if info > 0:
+        raise np.linalg.LinAlgError(
+            f"LAPACK SYEVD failed to converge; INFO={info}."
+        )
+
+    if not np.isfinite(eigenvalues).all() or not np.isfinite(eigenvectors).all():
+        raise FloatingPointError(
+            "Symmetric eigendecomposition produced non-finite values."
+        )
+
+    return (
+        np.asarray(eigenvalues, dtype=np.float64),
+        np.asarray(eigenvectors, dtype=np.float64),
+    )
