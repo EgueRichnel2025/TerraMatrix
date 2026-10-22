@@ -124,3 +124,108 @@ def dgemm(
         )
 
     return np.asarray(result, dtype=np.float64)
+
+
+def dsyrk(
+    a: ArrayLike,
+    *,
+    trans: str = "T",
+    alpha: float = 1.0,
+    beta: float = 0.0,
+    c: ArrayLike | None = None,
+) -> NDArray[np.float64]:
+    """Compute a symmetric rank-k update using BLAS DSYRK.
+
+    With trans='T', compute:
+
+        result = alpha * A.T @ A + beta * C
+
+    With trans='N', compute:
+
+        result = alpha * A @ A.T + beta * C
+
+    The input matrix and any initial C matrix must contain finite,
+    real float64-compatible values. The initial C matrix must be
+    symmetric within a numerical tolerance.
+
+    If C is omitted, beta must be zero. The caller's input arrays
+    are not modified.
+
+    The returned matrix is explicitly reconstructed from the triangle
+    computed by BLAS, so the complete result is symmetric.
+
+    Validation and memory-layout preparation are included in the
+    execution time of this wrapper.
+    """
+    if trans not in ("N", "T"):
+        raise ValueError("'trans' must be either 'N' or 'T'.")
+
+    a_matrix = _as_finite_matrix(a, "a")
+    alpha_value = _as_finite_scalar(alpha, "alpha")
+    beta_value = _as_finite_scalar(beta, "beta")
+
+    if trans == "T":
+        output_dimension = a_matrix.shape[1]
+    else:
+        output_dimension = a_matrix.shape[0]
+
+    output_shape = (output_dimension, output_dimension)
+
+    if c is None:
+        if beta_value != 0.0:
+            raise ValueError("'c' must be provided when 'beta' is non-zero.")
+
+        c_initial = np.zeros(
+            output_shape,
+            dtype=np.float64,
+            order="F",
+        )
+    else:
+        c_initial = _as_finite_matrix(c, "c")
+
+        if c_initial.shape != output_shape:
+            raise ValueError(
+                f"'c' must have shape {output_shape}, "
+                f"received {c_initial.shape}."
+            )
+
+        if not np.allclose(
+            c_initial,
+            c_initial.T,
+            rtol=1e-12,
+            atol=1e-14,
+        ):
+            raise ValueError("'c' must be symmetric.")
+
+        # Use an independent, explicitly symmetric copy.
+        c_initial = np.asfortranarray(
+            0.5 * c_initial + 0.5 * c_initial.T
+        )
+
+    syrk = get_blas_funcs(
+        "syrk",
+        arrays=(a_matrix,),
+        ilp64="preferred",
+    )
+
+    result = syrk(
+        alpha_value,
+        a_matrix,
+        beta=beta_value,
+        c=c_initial,
+        trans=1 if trans == "T" else 0,
+        lower=1,
+        overwrite_c=1,
+    )
+
+    if not np.isfinite(result).all():
+        raise FloatingPointError(
+            "DSYRK produced non-finite output; check input magnitudes."
+        )
+
+    # BLAS DSYRK computes only the selected triangle.
+    # Reconstruct the other triangle explicitly.
+    lower_triangle = np.tril(result)
+    symmetric_result = lower_triangle + np.tril(result, k=-1).T
+
+    return np.asarray(symmetric_result, dtype=np.float64)
