@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+*.egg-info/
+build/
+dist/
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+ENV/
+
+# Fichiers d'outils
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Secrets et variables d'environnement
+.env
+.env.*
+!.env.example
+
+# Éditeurs
+.vscode/
+.idea/
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Données satellitaires volumineuses
+data/raw/
+data/interim/
+data/processed/
+
+# Résultats générés
+results/figures/
+results/maps/
+results/benchmarks/
+results/reports/
