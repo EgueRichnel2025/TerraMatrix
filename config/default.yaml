@@ -1,0 +1,22 @@
+# TerraMatrix: default scientific configuration.
+
+numerical:
+  dtype: float64
+
+  # Preference only: this does not force a runtime BLAS backend.
+  # The actual loaded backend is reported by numerical diagnostics.
+  backend_preference: auto
+
+  # null leaves thread selection to the numerical libraries.
+  thread_limit: null
+
+benchmark:
+  # Number of timed repetitions per benchmark.
+  repetitions: 5
+
+  # Number of untimed warm-up runs.
+  warmup_runs: 1
+
+reproducibility:
+  # Random seed used by reproducible stochastic experiments.
+  random_seed: 42
