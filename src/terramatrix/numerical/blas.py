@@ -229,3 +229,122 @@ def dsyrk(
     symmetric_result = lower_triangle + np.tril(result, k=-1).T
 
     return np.asarray(symmetric_result, dtype=np.float64)
+
+
+def _as_finite_vector(value: ArrayLike, name: str) -> NDArray[np.float64]:
+    """Convert a real, finite, non-empty one-dimensional input to float64."""
+    try:
+        vector = np.asarray(value)
+    except (TypeError, ValueError) as exc:
+        raise ValueError(f"'{name}' must be a valid numeric vector.") from exc
+
+    if np.iscomplexobj(vector):
+        raise ValueError(f"'{name}' must contain real values, not complex values.")
+
+    try:
+        vector = np.asarray(vector, dtype=np.float64)
+    except (TypeError, ValueError, OverflowError) as exc:
+        raise ValueError(f"'{name}' must be convertible to float64.") from exc
+
+    if vector.ndim != 1:
+        raise ValueError(f"'{name}' must be a one-dimensional vector.")
+
+    if vector.size == 0:
+        raise ValueError(f"'{name}' must not be empty.")
+
+    if not np.isfinite(vector).all():
+        raise ValueError(f"'{name}' must contain only finite values.")
+
+    return np.ascontiguousarray(vector)
+
+
+def dgemv(
+    a: ArrayLike,
+    x: ArrayLike,
+    *,
+    trans: str = "N",
+    alpha: float = 1.0,
+    beta: float = 0.0,
+    y: ArrayLike | None = None,
+) -> NDArray[np.float64]:
+    """Compute a matrix-vector product using BLAS DGEMV.
+
+    With trans='N', compute:
+
+        result = alpha * A @ x + beta * y_initial
+
+    With trans='T', compute:
+
+        result = alpha * A.T @ x + beta * y_initial
+
+    Inputs must be finite, real, and float64-compatible. The input matrix
+    must be two-dimensional, and x and any supplied y must be vectors.
+
+    If y is omitted, beta must be zero. The caller's input arrays are
+    not modified.
+
+    Input validation and memory-layout preparation are included in the
+    execution time of this wrapper.
+    """
+    if trans not in ("N", "T"):
+        raise ValueError("'trans' must be either 'N' or 'T'.")
+
+    a_matrix = _as_finite_matrix(a, "a")
+    x_vector = _as_finite_vector(x, "x")
+    alpha_value = _as_finite_scalar(alpha, "alpha")
+    beta_value = _as_finite_scalar(beta, "beta")
+
+    if trans == "N":
+        input_dimension = a_matrix.shape[1]
+        output_dimension = a_matrix.shape[0]
+        transpose_flag = 0
+    else:
+        input_dimension = a_matrix.shape[0]
+        output_dimension = a_matrix.shape[1]
+        transpose_flag = 1
+
+    if x_vector.size != input_dimension:
+        raise ValueError(
+            f"'x' must have length {input_dimension} for trans='{trans}', "
+            f"received {x_vector.size}."
+        )
+
+    if y is None:
+        if beta_value != 0.0:
+            raise ValueError("'y' must be provided when 'beta' is non-zero.")
+
+        y_initial = np.zeros(output_dimension, dtype=np.float64)
+    else:
+        y_initial = _as_finite_vector(y, "y")
+
+        if y_initial.size != output_dimension:
+            raise ValueError(
+                f"'y' must have length {output_dimension}, "
+                f"received {y_initial.size}."
+            )
+
+        # BLAS may overwrite its output argument. Preserve the caller's input.
+        y_initial = np.array(y_initial, dtype=np.float64, copy=True)
+
+    gemv = get_blas_funcs(
+        "gemv",
+        arrays=(a_matrix, x_vector),
+        ilp64="preferred",
+    )
+
+    result = gemv(
+        alpha_value,
+        a_matrix,
+        x_vector,
+        beta=beta_value,
+        y=y_initial,
+        trans=transpose_flag,
+        overwrite_y=1,
+    )
+
+    if not np.isfinite(result).all():
+        raise FloatingPointError(
+            "DGEMV produced non-finite output; check input magnitudes."
+        )
+
+    return np.asarray(result, dtype=np.float64)

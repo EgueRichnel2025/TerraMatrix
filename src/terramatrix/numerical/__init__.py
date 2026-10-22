@@ -5,12 +5,13 @@ from terramatrix.numerical.backend import (
     classify_backend,
     get_numerical_runtime_info,
 )
-from terramatrix.numerical.blas import dgemm, dsyrk
+from terramatrix.numerical.blas import dgemm, dgemv, dsyrk
 
 __all__ = [
     "NumericalLibrary",
     "classify_backend",
     "dgemm",
+    "dgemv",
     "dsyrk",
     "get_numerical_runtime_info",
 ]
