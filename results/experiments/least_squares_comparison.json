@@ -1,0 +1,2493 @@
+{
+  "environment": {
+    "captured_at_utc": "2026-10-23T05:47:56.281349+00:00",
+    "project": {
+      "name": "terramatrix",
+      "version": "0.1.0"
+    },
+    "runtime": {
+      "blas_backend_status": "multiple_blas_libraries_detected",
+      "blas_backends": [
+        "OpenBLAS"
+      ],
+      "blas_library_count": 2,
+      "libraries": [
+        {
+          "architecture": "Haswell",
+          "filepath": "D:\\Projet\\TerraMatrix\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "internal_api": "openblas",
+          "name": "OpenBLAS",
+          "num_threads": 12,
+          "prefix": "libscipy_openblas",
+          "threading_layer": "pthreads",
+          "user_api": "blas",
+          "version": "0.3.34.106.0"
+        },
+        {
+          "architecture": "Haswell",
+          "filepath": "D:\\Projet\\TerraMatrix\\.venv\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-197ee2fc9b4d071f7e048078cac74115.dll",
+          "internal_api": "openblas",
+          "name": "OpenBLAS",
+          "num_threads": 12,
+          "prefix": "libscipy_openblas",
+          "threading_layer": "pthreads",
+          "user_api": "blas",
+          "version": "0.3.31.dev"
+        }
+      ],
+      "numpy_version": "2.5.4",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_implementation": "CPython",
+      "python_version": "3.12.8",
+      "scipy_version": "1.18.1"
+    },
+    "schema_version": 1,
+    "source_control": {
+      "commit": "6227da91741c82113bcb78d3cf0d28e93a1eb6f6",
+      "working_tree_clean": false
+    }
+  },
+  "experiments": [
+    {
+      "case": "well_conditioned",
+      "experiment_family": "TM-LS-01",
+      "experiment_id": "TM-LS-01",
+      "matrix": {
+        "dtype": "float64",
+        "frobenius_norm": 3.422064627646514,
+        "response_l2_norm": 3.1346972803591537,
+        "sha256": "b3ae237963630443972429e50fe2e2544d570c299bb79758f8d3697fdea3ed84",
+        "shape": [
+          1000,
+          20
+        ]
+      },
+      "matrix_generation": {
+        "algorithm": "orthogonal_factors_with_prescribed_spectrum",
+        "prescribed_condition_number_2": 2.0,
+        "prescribed_singular_values": [
+          1.0,
+          0.9736842105263158,
+          0.9473684210526316,
+          0.9210526315789473,
+          0.8947368421052632,
+          0.868421052631579,
+          0.8421052631578947,
+          0.8157894736842105,
+          0.7894736842105263,
+          0.7631578947368421,
+          0.736842105263158,
+          0.7105263157894737,
+          0.6842105263157895,
+          0.6578947368421053,
+          0.631578947368421,
+          0.6052631578947368,
+          0.5789473684210527,
+          0.5526315789473685,
+          0.5263157894736843,
+          0.5
+        ]
+      },
+      "methods": {
+        "normal_equations": {
+          "metrics": {
+            "coefficient_norm_2": 3.8623596271226783,
+            "coefficients": [
+              -0.5225429828650368,
+              -0.5460467509096976,
+              0.42099370687188314,
+              -0.8444273465803736,
+              -1.236377416076656,
+              -0.7658752279302821,
+              0.7095058848040493,
+              0.49331270646565434,
+              -0.8389433884650964,
+              -0.7855766912225687,
+              -0.20314209516896337,
+              0.5899513155068319,
+              -0.0587485034623578,
+              0.09767701817044865,
+              -1.4680513960857853,
+              -0.761526588394352,
+              1.3017348649529688,
+              1.9296922968185837,
+              -0.04285131955910861,
+              -0.8461337451451607
+            ],
+            "least_squares_gradient_norm_2": 9.526114239779495e-16,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 0.0017862687707198373,
+            "relative_residual": 0.00993685725679978,
+            "relative_stationarity_measure": 3.058236920850679e-14,
+            "residual_norm_2": 0.03114903941820739
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 8.199999999999996e-06,
+            "median_seconds": 8.72e-05,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0001099,
+              9.23e-05,
+              8.41e-05,
+              8.72e-05,
+              8.41e-05
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0001099,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 9.23e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 8.41e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 8.72e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 8.41e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0002249,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_pivoted": {
+          "metrics": {
+            "coefficient_norm_2": 3.8623596271226774,
+            "coefficients": [
+              -0.5225429828650366,
+              -0.5460467509096975,
+              0.42099370687188303,
+              -0.8444273465803733,
+              -1.2363774160766572,
+              -0.7658752279302825,
+              0.7095058848040495,
+              0.4933127064656543,
+              -0.8389433884650966,
+              -0.7855766912225695,
+              -0.20314209516896298,
+              0.589951315506832,
+              -0.05874850346235764,
+              0.09767701817044862,
+              -1.4680513960857853,
+              -0.7615265883943523,
+              1.3017348649529674,
+              1.9296922968185817,
+              -0.042851319559108765,
+              -0.8461337451451607
+            ],
+            "least_squares_gradient_norm_2": 1.124195564858529e-15,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 0.0017862687707200127,
+            "relative_residual": 0.00993685725679978,
+            "relative_stationarity_measure": 3.6090858204809014e-14,
+            "residual_norm_2": 0.03114903941820739
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "column_pivoted_qr_diagonal",
+            "rank_tolerance": 1.847011693560461e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 2.599999999999998e-05,
+            "median_seconds": 0.0007111,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0007379,
+              0.0007111,
+              0.0006819,
+              0.0006913,
+              0.0007173
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0007379,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007111,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006819,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006913,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007173,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0007926,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_unpivoted": {
+          "metrics": {
+            "coefficient_norm_2": 3.862359627122678,
+            "coefficients": [
+              -0.5225429828650364,
+              -0.5460467509096972,
+              0.420993706871883,
+              -0.8444273465803729,
+              -1.2363774160766563,
+              -0.7658752279302831,
+              0.709505884804049,
+              0.49331270646565456,
+              -0.8389433884650972,
+              -0.7855766912225698,
+              -0.20314209516896345,
+              0.5899513155068319,
+              -0.058748503462357764,
+              0.097677018170449,
+              -1.4680513960857853,
+              -0.7615265883943527,
+              1.3017348649529679,
+              1.929692296818582,
+              -0.042851319559108404,
+              -0.8461337451451609
+            ],
+            "least_squares_gradient_norm_2": 8.130790400592393e-16,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 0.0017862687707199966,
+            "relative_residual": 0.00993685725679978,
+            "relative_stationarity_measure": 2.6102860802313366e-14,
+            "residual_norm_2": 0.03114903941820739
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 1.7599999999999994e-05,
+            "median_seconds": 0.0007104,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0007512,
+              0.0007104,
+              0.0006797,
+              0.0007122,
+              0.0006946
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0007512,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007104,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006797,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007122,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006946,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0009408,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "svd_pseudoinverse": {
+          "metrics": {
+            "coefficient_norm_2": 3.8623596271226783,
+            "coefficients": [
+              -0.5225429828650376,
+              -0.5460467509096982,
+              0.4209937068718815,
+              -0.8444273465803736,
+              -1.2363774160766563,
+              -0.765875227930283,
+              0.7095058848040501,
+              0.49331270646565495,
+              -0.8389433884650972,
+              -0.7855766912225689,
+              -0.2031420951689637,
+              0.5899513155068332,
+              -0.05874850346235905,
+              0.09767701817044985,
+              -1.4680513960857857,
+              -0.7615265883943514,
+              1.301734864952967,
+              1.9296922968185826,
+              -0.04285131955910948,
+              -0.8461337451451604
+            ],
+            "least_squares_gradient_norm_2": 2.8066283828683774e-15,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 0.001786268770720004,
+            "relative_residual": 0.00993685725679978,
+            "relative_stationarity_measure": 9.010320816595821e-14,
+            "residual_norm_2": 0.03114903941820739
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "svd_singular_values",
+            "rank_tolerance": 2.2204460492503123e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 9.200000000000007e-06,
+            "median_seconds": 0.0008651,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0008452,
+              0.0008724,
+              0.0008632,
+              0.0011754,
+              0.0008651
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0008452,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008724,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008632,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0011754,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008651,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0008406,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "noise": {
+        "measured_l2_norm": 0.03145025328419899,
+        "sha256": "26a48252abad25b42bcb91fb5ad2b62d372476dda595afc9d30f8b4128a46a0b",
+        "standard_deviation": 0.001
+      },
+      "random_seed": 20261022,
+      "rank_diagnostics": {
+        "condition_number_status": "finite",
+        "expectation_matches": true,
+        "expected_numerical_rank": 20,
+        "largest_singular_value": 0.9999999999999997,
+        "maximum_rank": 20,
+        "measured_condition_number_2": 2.0000000000000004,
+        "numerical_rank": 20,
+        "rank_tolerance": 2.2204460492503123e-13,
+        "smallest_singular_value": 0.4999999999999998,
+        "target_condition_number_2": null
+      },
+      "reference_coefficients": [
+        -0.5217388268990664,
+        -0.5437387107924776,
+        0.42054138650186557,
+        -0.8464187477211395,
+        -1.2354930572958667,
+        -0.7648863984350992,
+        0.7123530312927423,
+        0.4919035543568362,
+        -0.8398848981017791,
+        -0.7841028772672203,
+        -0.20482004977197807,
+        0.5906049838494665,
+        -0.05922694619629289,
+        0.09768643841390455,
+        -1.466114810718042,
+        -0.7619068397618998,
+        1.3048231722862376,
+        1.9289038093304562,
+        -0.043710274757779825,
+        -0.8482049660452021
+      ],
+      "reference_coefficients_sha256": "7c3c6c44e2a7c89bd658e96be3ce333dfdb05906f0297fdd6642e438196d4541",
+      "response_sha256": "f00234fe35d8d69bfa9f22c9ec51ef8ce9806d3deedd4296b9995bd8fa0d21ee"
+    },
+    {
+      "case": "ill_conditioned",
+      "experiment_family": "TM-LS-02",
+      "experiment_id": "TM-LS-02-kappa-1e2",
+      "matrix": {
+        "dtype": "float64",
+        "frobenius_norm": 1.6133745303080795,
+        "response_l2_norm": 1.5139771728074012,
+        "sha256": "df1b873c6b729f2630c3fec50d15262082245e311b3fa5b1a4dea0f388c9c190",
+        "shape": [
+          1000,
+          20
+        ]
+      },
+      "matrix_generation": {
+        "algorithm": "orthogonal_factors_with_prescribed_spectrum",
+        "prescribed_condition_number_2": 100.0,
+        "prescribed_singular_values": [
+          1.0,
+          0.7847599703514613,
+          0.6158482110660264,
+          0.4832930238571753,
+          0.37926901907322497,
+          0.29763514416313186,
+          0.23357214690901226,
+          0.1832980710832436,
+          0.14384498882876628,
+          0.11288378916846892,
+          0.08858667904100828,
+          0.06951927961775606,
+          0.0545559478116852,
+          0.04281332398719396,
+          0.033598182862837826,
+          0.026366508987303583,
+          0.0206913808111479,
+          0.016237767391887224,
+          0.012742749857031341,
+          0.01
+        ]
+      },
+      "methods": {
+        "normal_equations": {
+          "metrics": {
+            "coefficient_norm_2": 3.8981514031118856,
+            "coefficients": [
+              -0.5572823123355607,
+              -0.6136967535193432,
+              0.4251877944214493,
+              -0.7805660546646204,
+              -1.2596155904422677,
+              -0.8255838525601,
+              0.6616078807817789,
+              0.5491145558235436,
+              -0.7776141198197488,
+              -0.7819003922445934,
+              -0.15497382082574515,
+              0.5896261340785702,
+              -0.05953439626295058,
+              0.07713049435258477,
+              -1.5461292131590716,
+              -0.801723728082088,
+              1.205842873246191,
+              1.9825393603758776,
+              -0.05659225047827318,
+              -0.8322483771624406
+            ],
+            "least_squares_gradient_norm_2": 2.4393272870061213e-16,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 0.05701495744271919,
+            "relative_residual": 0.020574312464993805,
+            "relative_stationarity_measure": 7.831147709743743e-15,
+            "residual_norm_2": 0.031149039418207392
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 6.999999999999994e-06,
+            "median_seconds": 8.32e-05,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              9.01e-05,
+              8.31e-05,
+              7.68e-05,
+              9.77e-05,
+              8.32e-05
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 9.01e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 8.31e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 7.68e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 9.77e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 8.32e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0001575,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_pivoted": {
+          "metrics": {
+            "coefficient_norm_2": 3.8981514031118594,
+            "coefficients": [
+              -0.5572823123354912,
+              -0.6136967535193679,
+              0.425187794421472,
+              -0.7805660546645591,
+              -1.2596155904421782,
+              -0.8255838525601243,
+              0.6616078807817776,
+              0.5491145558235457,
+              -0.7776141198197734,
+              -0.7819003922445479,
+              -0.15497382082572808,
+              0.5896261340785313,
+              -0.059534396262919946,
+              0.07713049435259281,
+              -1.5461292131590956,
+              -0.8017237280820769,
+              1.2058428732461948,
+              1.9825393603759358,
+              -0.056592250478330046,
+              -0.8322483771623771
+            ],
+            "least_squares_gradient_norm_2": 5.030256731364259e-16,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 0.05701495744272878,
+            "relative_residual": 0.020574312464993805,
+            "relative_stationarity_measure": 1.6148994721243163e-14,
+            "residual_norm_2": 0.031149039418207392
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "column_pivoted_qr_diagonal",
+            "rank_tolerance": 1.1440173981735372e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 0.00037930000000000006,
+            "median_seconds": 0.0007124,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0013183,
+              0.0010912,
+              0.0007124,
+              0.0007119,
+              0.0006976
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0013183,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0010912,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007124,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007119,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006976,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0007952,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_unpivoted": {
+          "metrics": {
+            "coefficient_norm_2": 3.89815140311186,
+            "coefficients": [
+              -0.5572823123354904,
+              -0.6136967535193636,
+              0.4251877944214682,
+              -0.7805660546645604,
+              -1.2596155904421777,
+              -0.8255838525601279,
+              0.6616078807817775,
+              0.549114555823546,
+              -0.7776141198197721,
+              -0.7819003922445505,
+              -0.15497382082572703,
+              0.5896261340785321,
+              -0.05953439626291849,
+              0.07713049435259282,
+              -1.5461292131590987,
+              -0.8017237280820786,
+              1.2058428732461912,
+              1.9825393603759351,
+              -0.05659225047832921,
+              -0.8322483771623759
+            ],
+            "least_squares_gradient_norm_2": 2.845789119531281e-16,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 0.05701495744272943,
+            "relative_residual": 0.020574312464993805,
+            "relative_stationarity_measure": 9.136041344080259e-15,
+            "residual_norm_2": 0.031149039418207392
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 1.619999999999996e-05,
+            "median_seconds": 0.000698,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0007092,
+              0.0007208,
+              0.000698,
+              0.000693,
+              0.0006835
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0007092,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007208,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000698,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000693,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006835,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0008418,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "svd_pseudoinverse": {
+          "metrics": {
+            "coefficient_norm_2": 3.89815140311186,
+            "coefficients": [
+              -0.5572823123354878,
+              -0.6136967535193643,
+              0.4251877944214677,
+              -0.780566054664558,
+              -1.2596155904421782,
+              -0.825583852560126,
+              0.6616078807817742,
+              0.5491145558235491,
+              -0.777614119819771,
+              -0.7819003922445509,
+              -0.15497382082572578,
+              0.5896261340785335,
+              -0.05953439626292001,
+              0.07713049435259184,
+              -1.5461292131590993,
+              -0.8017237280820784,
+              1.205842873246189,
+              1.9825393603759378,
+              -0.05659225047833061,
+              -0.8322483771623775
+            ],
+            "least_squares_gradient_norm_2": 1.527008490691327e-15,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 0.05701495744273048,
+            "relative_residual": 0.020574312464993805,
+            "relative_stationarity_measure": 4.902265107407305e-14,
+            "residual_norm_2": 0.031149039418207396
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "svd_singular_values",
+            "rank_tolerance": 2.2204460492503106e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 2.9300000000000007e-05,
+            "median_seconds": 0.0007737,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0008358,
+              0.0007911,
+              0.0007602,
+              0.0007737,
+              0.0007618
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0008358,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007911,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007602,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007737,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007618,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0012382,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "noise": {
+        "measured_l2_norm": 0.03145025328419899,
+        "sha256": "26a48252abad25b42bcb91fb5ad2b62d372476dda595afc9d30f8b4128a46a0b",
+        "standard_deviation": 0.001
+      },
+      "random_seed": 20261022,
+      "rank_diagnostics": {
+        "condition_number_status": "finite",
+        "expectation_matches": true,
+        "expected_numerical_rank": 20,
+        "largest_singular_value": 0.9999999999999989,
+        "maximum_rank": 20,
+        "measured_condition_number_2": 99.99999999999972,
+        "numerical_rank": 20,
+        "rank_tolerance": 2.2204460492503106e-13,
+        "smallest_singular_value": 0.010000000000000018,
+        "target_condition_number_2": 100.0
+      },
+      "reference_coefficients": [
+        -0.5217388268990664,
+        -0.5437387107924776,
+        0.42054138650186557,
+        -0.8464187477211395,
+        -1.2354930572958667,
+        -0.7648863984350992,
+        0.7123530312927423,
+        0.4919035543568362,
+        -0.8398848981017791,
+        -0.7841028772672203,
+        -0.20482004977197807,
+        0.5906049838494665,
+        -0.05922694619629289,
+        0.09768643841390455,
+        -1.466114810718042,
+        -0.7619068397618998,
+        1.3048231722862376,
+        1.9289038093304562,
+        -0.043710274757779825,
+        -0.8482049660452021
+      ],
+      "reference_coefficients_sha256": "7c3c6c44e2a7c89bd658e96be3ce333dfdb05906f0297fdd6642e438196d4541",
+      "response_sha256": "14aaa0ab6d2ed29738b0b1c1595e797bad116b2c9986a2eacd1594c9a7aba16c"
+    },
+    {
+      "case": "ill_conditioned",
+      "experiment_family": "TM-LS-02",
+      "experiment_id": "TM-LS-02-kappa-1e4",
+      "matrix": {
+        "dtype": "float64",
+        "frobenius_norm": 1.2692532622567108,
+        "response_l2_norm": 1.0494241355815384,
+        "sha256": "812ec7634cc8e0537648dd355fb3ce14e757ed536139f7b06c40e28281b27e79",
+        "shape": [
+          1000,
+          20
+        ]
+      },
+      "matrix_generation": {
+        "algorithm": "orthogonal_factors_with_prescribed_spectrum",
+        "prescribed_condition_number_2": 10000.0,
+        "prescribed_singular_values": [
+          1.0,
+          0.6158482110660264,
+          0.37926901907322497,
+          0.23357214690901226,
+          0.14384498882876628,
+          0.08858667904100828,
+          0.0545559478116852,
+          0.033598182862837826,
+          0.0206913808111479,
+          0.012742749857031341,
+          0.007847599703514615,
+          0.004832930238571752,
+          0.002976351441631319,
+          0.0018329807108324375,
+          0.0011288378916846896,
+          0.0006951927961775605,
+          0.00042813323987193956,
+          0.0002636650898730361,
+          0.00016237767391887227,
+          0.0001
+        ]
+      },
+      "methods": {
+        "normal_equations": {
+          "metrics": {
+            "coefficient_norm_2": 20.861033888012628,
+            "coefficients": [
+              -4.506747158231731,
+              -7.831475463508475,
+              0.8682277083746577,
+              4.152105898028238,
+              -3.395892882041041,
+              -6.300640606149837,
+              -2.617234125788347,
+              4.497131141374674,
+              4.483753472249963,
+              1.2506923493243165,
+              4.077210635477516,
+              1.8124432302214801,
+              -1.714132809241905,
+              -2.2233024347147063,
+              -8.664360929888392,
+              -6.128773163062257,
+              -6.0947555390091335,
+              6.436213440348072,
+              -3.4909357295038563,
+              -2.0959867782121475
+            ],
+            "least_squares_gradient_norm_2": 1.2304118474772965e-15,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 5.087459651213977,
+            "relative_residual": 0.0296820307081523,
+            "relative_stationarity_measure": 3.9500795865894035e-14,
+            "residual_norm_2": 0.031149039418207403
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 2.9999999999999916e-06,
+            "median_seconds": 8.03e-05,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              9.83e-05,
+              8.03e-05,
+              7.74e-05,
+              8.07e-05,
+              7.77e-05
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 9.83e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 8.03e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 7.74e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 8.07e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 7.77e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0001622,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_pivoted": {
+          "metrics": {
+            "coefficient_norm_2": 20.86103389580787,
+            "coefficients": [
+              -4.506747161689575,
+              -7.831475468464278,
+              0.868227708320915,
+              4.152105900443921,
+              -3.3958928830380453,
+              -6.300640608941882,
+              -2.61723412523581,
+              4.497131140386406,
+              4.483753474991356,
+              1.2506923515155253,
+              4.077210637531548,
+              1.8124432318773442,
+              -1.7141328095265047,
+              -2.2233024356773106,
+              -8.664360930470645,
+              -6.128773166220939,
+              -6.094755541424391,
+              6.436213442578175,
+              -3.490935730008111,
+              -2.0959867776766603
+            ],
+            "least_squares_gradient_norm_2": 1.4519676573613753e-15,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 5.087459653275315,
+            "relative_residual": 0.02968203070815231,
+            "relative_stationarity_measure": 4.661356126804552e-14,
+            "residual_norm_2": 0.031149039418207413
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "column_pivoted_qr_diagonal",
+            "rank_tolerance": 1.081340495182542e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 6.320000000000002e-05,
+            "median_seconds": 0.0007648,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0007648,
+              0.0008097,
+              0.0012438,
+              0.0007157,
+              0.0007465
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0007648,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008097,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0012438,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007157,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007465,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0008342,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_unpivoted": {
+          "metrics": {
+            "coefficient_norm_2": 20.861033895813776,
+            "coefficients": [
+              -4.506747161691333,
+              -7.83147546846661,
+              0.8682277083212293,
+              4.152105900445153,
+              -3.395892883038854,
+              -6.300640608943136,
+              -2.617234125236324,
+              4.497131140388051,
+              4.48375347499317,
+              1.2506923515158428,
+              4.077210637532583,
+              1.812443231877952,
+              -1.7141328095271067,
+              -2.223302435677871,
+              -8.664360930472643,
+              -6.128773166222534,
+              -6.094755541426858,
+              6.436213442579605,
+              -3.490935730008871,
+              -2.095986777677655
+            ],
+            "least_squares_gradient_norm_2": 3.6569798416528086e-16,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 5.08745965327685,
+            "relative_residual": 0.02968203070815229,
+            "relative_stationarity_measure": 1.1740265221518244e-14,
+            "residual_norm_2": 0.031149039418207392
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 4.969999999999996e-05,
+            "median_seconds": 0.0007691,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0008816,
+              0.0007999,
+              0.0007691,
+              0.0007502,
+              0.0007502
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0008816,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007999,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007691,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007502,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007502,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0007481,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "svd_pseudoinverse": {
+          "metrics": {
+            "coefficient_norm_2": 20.86103389581381,
+            "coefficients": [
+              -4.506747161691301,
+              -7.831475468466654,
+              0.8682277083212511,
+              4.152105900445179,
+              -3.395892883038842,
+              -6.300640608943166,
+              -2.6172341252363416,
+              4.497131140388035,
+              4.483753474993158,
+              1.2506923515158983,
+              4.077210637532615,
+              1.8124432318779584,
+              -1.7141328095271198,
+              -2.223302435677894,
+              -8.664360930472656,
+              -6.128773166222537,
+              -6.094755541426814,
+              6.436213442579611,
+              -3.4909357300089416,
+              -2.095986777677644
+            ],
+            "least_squares_gradient_norm_2": 3.2265643640062756e-15,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 5.087459653276861,
+            "relative_residual": 0.029682030708152313,
+            "relative_stationarity_measure": 1.0358471478642991e-13,
+            "residual_norm_2": 0.031149039418207417
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "svd_singular_values",
+            "rank_tolerance": 2.2204460492503116e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 4.8799999999999994e-05,
+            "median_seconds": 0.0008523,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0008523,
+              0.0009376,
+              0.0007714,
+              0.0008131,
+              0.0008619
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0008523,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0009376,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007714,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008131,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008619,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0008522,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "noise": {
+        "measured_l2_norm": 0.03145025328419899,
+        "sha256": "26a48252abad25b42bcb91fb5ad2b62d372476dda595afc9d30f8b4128a46a0b",
+        "standard_deviation": 0.001
+      },
+      "random_seed": 20261022,
+      "rank_diagnostics": {
+        "condition_number_status": "finite",
+        "expectation_matches": true,
+        "expected_numerical_rank": 20,
+        "largest_singular_value": 0.9999999999999993,
+        "maximum_rank": 20,
+        "measured_condition_number_2": 10000.000000000065,
+        "numerical_rank": 20,
+        "rank_tolerance": 2.2204460492503116e-13,
+        "smallest_singular_value": 9.999999999999929e-05,
+        "target_condition_number_2": 10000.0
+      },
+      "reference_coefficients": [
+        -0.5217388268990664,
+        -0.5437387107924776,
+        0.42054138650186557,
+        -0.8464187477211395,
+        -1.2354930572958667,
+        -0.7648863984350992,
+        0.7123530312927423,
+        0.4919035543568362,
+        -0.8398848981017791,
+        -0.7841028772672203,
+        -0.20482004977197807,
+        0.5906049838494665,
+        -0.05922694619629289,
+        0.09768643841390455,
+        -1.466114810718042,
+        -0.7619068397618998,
+        1.3048231722862376,
+        1.9289038093304562,
+        -0.043710274757779825,
+        -0.8482049660452021
+      ],
+      "reference_coefficients_sha256": "7c3c6c44e2a7c89bd658e96be3ce333dfdb05906f0297fdd6642e438196d4541",
+      "response_sha256": "f6e97d292b1937583cb5ae25de7f8bc610a721c2ce1d60cfefb44a5ec8c182f7"
+    },
+    {
+      "case": "ill_conditioned",
+      "experiment_family": "TM-LS-02",
+      "experiment_id": "TM-LS-02-kappa-1e6",
+      "matrix": {
+        "dtype": "float64",
+        "frobenius_norm": 1.1422583997395999,
+        "response_l2_norm": 0.8146918763905602,
+        "sha256": "2c40235997484cb8ab3b1d7f09a2056f5db0026986025db687d69d81bd728647",
+        "shape": [
+          1000,
+          20
+        ]
+      },
+      "matrix_generation": {
+        "algorithm": "orthogonal_factors_with_prescribed_spectrum",
+        "prescribed_condition_number_2": 1000000.0,
+        "prescribed_singular_values": [
+          1.0,
+          0.4832930238571753,
+          0.23357214690901226,
+          0.11288378916846892,
+          0.0545559478116852,
+          0.026366508987303583,
+          0.012742749857031341,
+          0.006158482110660267,
+          0.002976351441631319,
+          0.0014384498882876629,
+          0.0006951927961775605,
+          0.00033598182862837843,
+          0.00016237767391887227,
+          7.847599703514623e-05,
+          3.792690190732254e-05,
+          1.8329807108324375e-05,
+          8.858667904100832e-06,
+          4.281332398719396e-06,
+          2.06913808111479e-06,
+          1e-06
+        ]
+      },
+      "methods": {
+        "normal_equations": {
+          "metrics": {
+            "coefficient_norm_2": 1906.807812222016,
+            "coefficients": [
+              -405.6453672846488,
+              -755.3500215702912,
+              40.900593238783394,
+              437.8230982122194,
+              -231.67108464521667,
+              -524.691761516242,
+              -320.5747886887314,
+              303.7166368915651,
+              465.19449215697875,
+              249.9873208418699,
+              431.6960277388683,
+              141.10927119292253,
+              -227.2449222269547,
+              -238.0555404372158,
+              -700.5224503407165,
+              -569.9806420993517,
+              -627.7227949468984,
+              381.0294809428109,
+              -425.1215066863246,
+              -233.29488052805863
+            ],
+            "least_squares_gradient_norm_2": 6.35672553507352e-14,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 493.38963248608115,
+            "relative_residual": 0.038234135285862156,
+            "relative_stationarity_measure": 2.040745285826508e-12,
+            "residual_norm_2": 0.031149039418209568
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 2.499999999999993e-06,
+            "median_seconds": 7.79e-05,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              8.77e-05,
+              7.8e-05,
+              7.79e-05,
+              7.55e-05,
+              7.51e-05
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 8.77e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 7.8e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 7.79e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 7.55e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 7.51e-05,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0001469,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_pivoted": {
+          "metrics": {
+            "coefficient_norm_2": 1906.8075351895782,
+            "coefficients": [
+              -405.64656194300517,
+              -755.3506736368574,
+              40.90093429555731,
+              437.8235513609513,
+              -231.67089142815763,
+              -524.6918121806823,
+              -320.5731064339365,
+              303.716833162051,
+              465.19544139195375,
+              249.98740052301065,
+              431.6956103285236,
+              141.10996402873934,
+              -227.24408470446923,
+              -238.055257590753,
+              -700.5208888737919,
+              -569.980479260595,
+              -627.7234816055237,
+              381.0304381416986,
+              -425.1199559341912,
+              -233.29363256965178
+            ],
+            "least_squares_gradient_norm_2": 2.476691839322158e-13,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 493.38956088533297,
+            "relative_residual": 0.03823413528585913,
+            "relative_stationarity_measure": 7.951101817523448e-12,
+            "residual_norm_2": 0.0311490394182071
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "column_pivoted_qr_diagonal",
+            "rank_tolerance": 1.0791792612094662e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 2.639999999999999e-05,
+            "median_seconds": 0.0006682,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0006921,
+              0.000692,
+              0.0006513,
+              0.0006682,
+              0.0006656
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0006921,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000692,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006513,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006682,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006656,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0008514,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_unpivoted": {
+          "metrics": {
+            "coefficient_norm_2": 1906.8075351407608,
+            "coefficients": [
+              -405.64656192879755,
+              -755.3506736175328,
+              40.900934294578704,
+              437.8235513524294,
+              -231.6708914200746,
+              -524.6918121695331,
+              -320.5731064272973,
+              303.71683315287817,
+              465.1954413788657,
+              249.987400519154,
+              431.69561031884,
+              141.10996402389455,
+              -227.24408469762236,
+              -238.05525758581058,
+              -700.520888856197,
+              -569.9804792449804,
+              -627.7234815879543,
+              381.0304381330765,
+              -425.1199559254009,
+              -233.29363255940044
+            ],
+            "least_squares_gradient_norm_2": 3.9652271766278104e-14,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 493.38956087269617,
+            "relative_residual": 0.03823413528586181,
+            "relative_stationarity_measure": 1.272985379545861e-12,
+            "residual_norm_2": 0.031149039418209287
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 2.8299999999999983e-05,
+            "median_seconds": 0.0006754,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0007011,
+              0.0006754,
+              0.0006728,
+              0.0006706,
+              0.0008512
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0007011,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006754,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006728,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006706,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008512,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0007821,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "svd_pseudoinverse": {
+          "metrics": {
+            "coefficient_norm_2": 1906.8075351407533,
+            "coefficients": [
+              -405.64656192879085,
+              -755.3506736175276,
+              40.900934294577624,
+              437.82355135242835,
+              -231.67089142007111,
+              -524.6918121695327,
+              -320.5731064272996,
+              303.7168331528757,
+              465.19544137886214,
+              249.98740051915468,
+              431.69561031884007,
+              141.1099640238918,
+              -227.2440846976215,
+              -238.0552575858108,
+              -700.5208888561971,
+              -569.9804792449778,
+              -627.7234815879507,
+              381.03043813307556,
+              -425.11995592540273,
+              -233.29363255939793
+            ],
+            "least_squares_gradient_norm_2": 2.435802198073881e-13,
+            "reference_coefficient_norm_2": 3.8627300531660334,
+            "relative_coefficient_error_2": 493.38956087269423,
+            "relative_residual": 0.038234135285862454,
+            "relative_stationarity_measure": 7.819830863387415e-12,
+            "residual_norm_2": 0.03114903941820981
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "svd_singular_values",
+            "rank_tolerance": 2.2204460492503113e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 0.00012759999999999996,
+            "median_seconds": 0.0007956,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0007768,
+              0.0007956,
+              0.0011964,
+              0.0009044,
+              0.0007111
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0007768,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007956,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0011964,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0009044,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007111,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0008072,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "noise": {
+        "measured_l2_norm": 0.03145025328419899,
+        "sha256": "26a48252abad25b42bcb91fb5ad2b62d372476dda595afc9d30f8b4128a46a0b",
+        "standard_deviation": 0.001
+      },
+      "random_seed": 20261022,
+      "rank_diagnostics": {
+        "condition_number_status": "finite",
+        "expectation_matches": true,
+        "expected_numerical_rank": 20,
+        "largest_singular_value": 0.9999999999999992,
+        "maximum_rank": 20,
+        "measured_condition_number_2": 1000000.000000135,
+        "numerical_rank": 20,
+        "rank_tolerance": 2.2204460492503113e-13,
+        "smallest_singular_value": 9.999999999998642e-07,
+        "target_condition_number_2": 1000000.0
+      },
+      "reference_coefficients": [
+        -0.5217388268990664,
+        -0.5437387107924776,
+        0.42054138650186557,
+        -0.8464187477211395,
+        -1.2354930572958667,
+        -0.7648863984350992,
+        0.7123530312927423,
+        0.4919035543568362,
+        -0.8398848981017791,
+        -0.7841028772672203,
+        -0.20482004977197807,
+        0.5906049838494665,
+        -0.05922694619629289,
+        0.09768643841390455,
+        -1.466114810718042,
+        -0.7619068397618998,
+        1.3048231722862376,
+        1.9289038093304562,
+        -0.043710274757779825,
+        -0.8482049660452021
+      ],
+      "reference_coefficients_sha256": "7c3c6c44e2a7c89bd658e96be3ce333dfdb05906f0297fdd6642e438196d4541",
+      "response_sha256": "ce153a90d6b9bdd6dbb6144662543be20f496dfeacb011a7b98c8591e5662105"
+    },
+    {
+      "case": "rank_deficient",
+      "experiment_family": "TM-LS-03",
+      "experiment_id": "TM-LS-03",
+      "matrix": {
+        "dtype": "float64",
+        "frobenius_norm": 141.40120414591496,
+        "response_l2_norm": 140.3216220989406,
+        "sha256": "9c64bf34c114a36bb57cf2bbec8cae5be82ed34ebacd0f29c364a59578292aa2",
+        "shape": [
+          1000,
+          20
+        ]
+      },
+      "matrix_generation": {
+        "algorithm": "random_matrix_with_exact_duplicate_column",
+        "collinearity_epsilon": 0.0,
+        "duplicate_column_indices_zero_based": [
+          0,
+          19
+        ]
+      },
+      "methods": {
+        "normal_equations": {
+          "metrics": null,
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "failure",
+          "timing": {
+            "interquartile_range_seconds": null,
+            "median_seconds": null,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0001026,
+              9.17e-05,
+              8.87e-05,
+              8.05e-05,
+              7.67e-05
+            ],
+            "status": "incomplete_due_to_solver_failure",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0001026,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 9.17e-05,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 8.87e-05,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 8.05e-05,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 7.67e-05,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0001575,
+              "error_message": "Singular matrix",
+              "error_type": "LinAlgError",
+              "status": "failure",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_pivoted": {
+          "metrics": {
+            "coefficient_norm_2": 4.664294912850319,
+            "coefficients": [
+              -0.30933117057939175,
+              1.2294328255524405,
+              -0.11774231191966143,
+              1.807507263238153,
+              0.41930003849186875,
+              0.2971286878365819,
+              -1.5855585878227962,
+              -1.21057748270431,
+              0.6013514149786562,
+              -1.0148944118816239,
+              0.8711888053111807,
+              1.1938863745803883,
+              -1.164209415680981,
+              -0.48861595976859945,
+              0.00529285965408572,
+              1.1745244302081705,
+              -1.4951281610505438,
+              0.692581280124736,
+              -1.832814216723925,
+              0.0
+            ],
+            "least_squares_gradient_norm_2": 2.523698057786916e-12,
+            "reference_coefficient_norm_2": 4.6646225593668795,
+            "relative_coefficient_error_2": null,
+            "relative_residual": 0.0002156792487747886,
+            "relative_stationarity_measure": 1.8191536629040382e-12,
+            "residual_norm_2": 0.03026446204115928
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 19,
+            "method": "column_pivoted_qr_diagonal",
+            "rank_tolerance": 7.317077198993613e-12
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 3.209999999999997e-05,
+            "median_seconds": 0.0007065,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0007128,
+              0.0006807,
+              0.0007065,
+              0.0006733,
+              0.0007354
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0007128,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006807,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007065,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006733,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007354,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0007708,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_unpivoted": {
+          "metrics": {
+            "coefficient_norm_2": 65725446680.94639,
+            "coefficients": [
+              -46474909044.766716,
+              1.2294328922405693,
+              -0.11774223197655481,
+              1.8075072213275114,
+              0.41929999060738155,
+              0.29712865108857417,
+              -1.5855585627033715,
+              -1.210577399456383,
+              0.6013514859936462,
+              -1.0148944513417557,
+              0.8711888480309115,
+              1.193886337066402,
+              -1.164209526491266,
+              -0.48861605195455443,
+              0.0052929324097686845,
+              1.1745243769975453,
+              -1.4951281734854234,
+              0.6925813081833719,
+              -1.8328141483561204,
+              46474909044.45739
+            ],
+            "least_squares_gradient_norm_2": 0.007376940837161815,
+            "reference_coefficient_norm_2": 4.6646225593668795,
+            "relative_coefficient_error_2": null,
+            "relative_residual": 0.0002157128232125148,
+            "relative_stationarity_measure": 0.005316682077709447,
+            "residual_norm_2": 0.030269173260722083
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 2.3499999999999975e-05,
+            "median_seconds": 0.0006928,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.000716,
+              0.0006928,
+              0.0006316,
+              0.0006925,
+              0.0008102
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.000716,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006928,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006316,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006925,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008102,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0007384,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "svd_pseudoinverse": {
+          "metrics": {
+            "coefficient_norm_2": 4.65916346005325,
+            "coefficients": [
+              -0.1546655852896994,
+              1.2294328255524427,
+              -0.11774231191966204,
+              1.8075072632381497,
+              0.4193000384918688,
+              0.2971286878365826,
+              -1.5855585878227942,
+              -1.2105774827043105,
+              0.6013514149786563,
+              -1.014894411881626,
+              0.8711888053111811,
+              1.1938863745803916,
+              -1.1642094156809817,
+              -0.48861595976860084,
+              0.005292859654086268,
+              1.174524430208172,
+              -1.4951281610505456,
+              0.6925812801247366,
+              -1.8328142167239263,
+              -0.154665585289699
+            ],
+            "least_squares_gradient_norm_2": 1.1601900523407086e-11,
+            "reference_coefficient_norm_2": 4.6646225593668795,
+            "relative_coefficient_error_2": null,
+            "relative_residual": 0.00021567924877478862,
+            "relative_stationarity_measure": 8.362981367237036e-12,
+            "residual_norm_2": 0.030264462041159283
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 19,
+            "method": "svd_singular_values",
+            "rank_tolerance": 1.0178300651290097e-11
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 5.159999999999995e-05,
+            "median_seconds": 0.0008287,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0010685,
+              0.0008287,
+              0.0007943,
+              0.0008032,
+              0.0008548
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 5,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0010685,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008287,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007943,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008032,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008548,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 1
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0007203,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "noise": {
+        "measured_l2_norm": 0.030532499442621996,
+        "sha256": "bfcb3caea16d0f800f3ea9516be410d0de8d160a9ab171e1eca112eb98b8d575",
+        "standard_deviation": 0.001
+      },
+      "random_seed": 20261022,
+      "rank_diagnostics": {
+        "condition_number_status": "infinite_due_to_numerical_rank_deficiency",
+        "expectation_matches": true,
+        "expected_numerical_rank": 19,
+        "largest_singular_value": 45.83899102041496,
+        "maximum_rank": 20,
+        "measured_condition_number_2": null,
+        "numerical_rank": 19,
+        "rank_tolerance": 1.0178300651290097e-11,
+        "smallest_singular_value": 1.1293854325634964e-15,
+        "target_condition_number_2": null
+      },
+      "reference_coefficients": [
+        -0.3137563121310843,
+        1.2294614853155617,
+        -0.11777057378936721,
+        1.8075501100451468,
+        0.419298309389236,
+        0.29720547112093554,
+        -1.5855486333277764,
+        -1.2105720838275356,
+        0.6013756465222925,
+        -1.0149129711787404,
+        0.8712082958787454,
+        1.1938806713781858,
+        -1.1642158970457328,
+        -0.4886132915777109,
+        0.005273083159633482,
+        1.1744852147074376,
+        -1.4951065937023857,
+        0.6925639026040389,
+        -1.8328496285797826,
+        0.004382656318450185
+      ],
+      "reference_coefficients_sha256": "ce1ab397e53dbbe27afb7edca688e4e94c003e66f764e09b861da16398d68bc8",
+      "response_sha256": "612fb41b0126c1c52c0a71da14f238e200fc55cf393988fe6c2245350b1e430f"
+    }
+  ],
+  "parameters": {
+    "base_random_seed": 20261022,
+    "case_seed_policy": "The base seed is restarted independently for each case. Within the controlled-spectrum family, identical random factors, reference coefficients, and noise are reused across target condition numbers.",
+    "dtype": "float64",
+    "n_features": 20,
+    "n_samples": 1000,
+    "noise_standard_deviation": 0.001,
+    "target_condition_numbers": [
+      100.0,
+      10000.0,
+      1000000.0
+    ]
+  },
+  "performance_measurements": {
+    "interpretation": "Per-method timing summaries are omitted when a solver fails in any warm-up or timed attempt.",
+    "performed": true,
+    "timed_repetitions": 5,
+    "timer": "time.perf_counter_ns",
+    "timing_scope": "Public solver call on preconstructed inputs; includes solver input validation and memory preparation, but excludes matrix generation and post-solve metric calculations.",
+    "warmup_runs": 1
+  },
+  "purpose": "least_squares_numerical_accuracy_and_timing",
+  "schema_version": 1,
+  "suite_id": "TM-LS-COMPARISON-01"
+}

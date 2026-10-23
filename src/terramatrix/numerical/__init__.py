@@ -12,6 +12,12 @@ from terramatrix.numerical.lapack import (
     svd_factorization,
     symmetric_eigendecomposition,
 )
+from terramatrix.numerical.least_squares import (
+    solve_normal_equations,
+    solve_pivoted_qr,
+    solve_qr,
+    solve_svd,
+)
 from terramatrix.numerical.pca import PCAResult, principal_component_analysis
 
 __all__ = [
@@ -26,6 +32,10 @@ __all__ = [
     "get_numerical_runtime_info",
     "principal_component_analysis",
     "qr_factorization",
+    "solve_normal_equations",
+    "solve_pivoted_qr",
+    "solve_qr",
+    "solve_svd",
     "svd_factorization",
     "symmetric_eigendecomposition",
 ]
