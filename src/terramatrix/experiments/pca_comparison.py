@@ -174,6 +174,9 @@ def _summarize_method(
         "total_variance": float(result.total_variance),
         "reconstruction_relative_error_fro": reconstruction_error,
         "component_orthogonality_error_fro": orthogonality_error,
+        "covariance_eigenvalue_tolerance": (
+            result.covariance_eigenvalue_tolerance
+        ),
     }
 
     numeric_values = [
@@ -244,6 +247,77 @@ def _compare_method_results(
     return metrics
 
 
+def _compare_singular_spectra(
+    covariance: dict[str, Any],
+    direct_svd: dict[str, Any],
+    *,
+    shape: tuple[int, int],
+) -> dict[str, Any]:
+    """Compare singular values component by component against direct SVD."""
+    covariance_s = np.asarray(
+        covariance["singular_values"],
+        dtype=np.float64,
+    )
+    reference_s = np.asarray(
+        direct_svd["singular_values"],
+        dtype=np.float64,
+    )
+
+    tolerance = (
+        max(shape)
+        * np.finfo(np.float64).eps
+        * float(reference_s[0])
+    )
+    significant = reference_s > tolerance
+    absolute_s = np.abs(covariance_s - reference_s)
+
+    relative_s = [
+        float(error / reference) if keep else None
+        for error, reference, keep in zip(
+            absolute_s,
+            reference_s,
+            significant,
+            strict=True,
+        )
+    ]
+
+    covariance_variance = np.asarray(
+        covariance["explained_variance"],
+        dtype=np.float64,
+    )
+    reference_variance = np.asarray(
+        direct_svd["explained_variance"],
+        dtype=np.float64,
+    )
+    absolute_variance = np.abs(covariance_variance - reference_variance)
+
+    relative_variance = [
+        float(error / reference) if keep else None
+        for error, reference, keep in zip(
+            absolute_variance,
+            reference_variance,
+            significant,
+            strict=True,
+        )
+    ]
+
+    return {
+        "reference_method": "svd",
+        "reference_singular_value_tolerance": float(tolerance),
+        "reference_numerical_rank": int(np.count_nonzero(significant)),
+        "covariance_numerical_rank_at_reference_tolerance": int(
+            np.count_nonzero(covariance_s > tolerance)
+        ),
+        "component_is_significant_by_direct_svd": significant.tolist(),
+        "absolute_singular_value_differences": absolute_s.tolist(),
+        "relative_singular_value_differences": relative_s,
+        "absolute_explained_variance_differences": (
+            absolute_variance.tolist()
+        ),
+        "relative_explained_variance_differences": relative_variance,
+    }
+
+
 def _run_case(
     *,
     experiment_id: str,
@@ -260,7 +334,9 @@ def _run_case(
         seed,
     )
 
-    diagnostics = diagnose_matrix(matrix)
+    # PCA analyzes centered data, so diagnose that matrix.
+    centered = matrix - np.mean(matrix, axis=0, keepdims=True)
+    diagnostics = diagnose_matrix(centered)
 
     if case_name == "rank_deficient":
         expected_rank = n_features - 1
@@ -276,9 +352,6 @@ def _run_case(
             f"{experiment_id}: expected numerical rank {expected_rank}, "
             f"observed {diagnostics.numerical_rank}."
         )
-
-    # Center once for independent reconstruction-error evaluation.
-    centered = matrix - np.mean(matrix, axis=0, keepdims=True)
 
     method_results = {
         method: _summarize_method(matrix, centered, method)
@@ -311,6 +384,7 @@ def _run_case(
             ),
         },
         "rank_diagnostics": {
+            "diagnosed_matrix": "centered_data_matrix",
             "numerical_rank": diagnostics.numerical_rank,
             "maximum_rank": diagnostics.maximum_rank,
             "expected_numerical_rank": expected_rank,
@@ -328,6 +402,11 @@ def _run_case(
         "comparison": _compare_method_results(
             method_results["covariance"],
             method_results["svd"],
+        ),
+        "component_comparison": _compare_singular_spectra(
+            method_results["covariance"],
+            method_results["svd"],
+            shape=diagnostics.shape,
         ),
     }
 

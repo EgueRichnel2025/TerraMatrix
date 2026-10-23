@@ -182,3 +182,41 @@ def test_experiment_runner_rejects_invalid_parameters(
             project_root=tmp_path,
             **parameters,
         )
+
+def test_componentwise_report_marks_null_component_without_relative_error(
+    tmp_path: Path,
+) -> None:
+    report = run_pca_comparison_experiments(
+        output_path=tmp_path / "component-comparison.json",
+        n_samples=20,
+        n_features=4,
+        seed=20261022,
+        project_root=tmp_path,
+    )
+
+    experiment = report["experiments"][2]
+    comparison = experiment["component_comparison"]
+    covariance = experiment["methods"]["covariance"]
+    direct_svd = experiment["methods"]["svd"]
+
+    assert comparison["reference_method"] == "svd"
+    assert comparison["reference_numerical_rank"] == 3
+    assert comparison["covariance_numerical_rank_at_reference_tolerance"] == 3
+
+    assert (
+        experiment["rank_diagnostics"]["diagnosed_matrix"]
+        == "centered_data_matrix"
+    )
+
+    significant = comparison["component_is_significant_by_direct_svd"]
+    relative_errors = comparison["relative_singular_value_differences"]
+    absolute_errors = comparison["absolute_singular_value_differences"]
+
+    assert significant == [True, True, True, False]
+    assert all(np.isfinite(value) for value in relative_errors[:3])
+    assert relative_errors[-1] is None
+    assert absolute_errors[-1] > 0.0
+
+    assert covariance["singular_values"][-1] == 0.0
+    assert covariance["covariance_eigenvalue_tolerance"] > 0.0
+    assert direct_svd["covariance_eigenvalue_tolerance"] is None

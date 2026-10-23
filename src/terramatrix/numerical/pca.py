@@ -36,6 +36,7 @@ class PCAResult:
     explained_variance_ratio: NDArray[np.float64]
     total_variance: float
     method: PCAMethod
+    covariance_eigenvalue_tolerance: float | None
 
     @property
     def n_components(self) -> int:
@@ -99,10 +100,11 @@ def principal_component_analysis(
 
     Notes
     -----
-    Sample covariance uses n_samples - 1 in the denominator. Eigenvalues
-    from the covariance method are clipped at zero to remove negative
-    values caused by finite-precision roundoff in a positive-semidefinite
-    covariance matrix.
+    Sample covariance uses n_samples - 1 in the denominator. For the
+    covariance method, eigenvalues at or below a dimension-scaled
+    float64 tolerance are treated as numerical zero. Materially negative
+    eigenvalues raise FloatingPointError. The absolute threshold is
+    recorded in covariance_eigenvalue_tolerance; direct SVD reports None.
 
     The two methods can produce different results for poorly conditioned
     data because forming the covariance matrix can reduce numerical accuracy.
@@ -132,6 +134,7 @@ def principal_component_analysis(
         )
 
     denominator = float(n_samples - 1)
+    covariance_eigenvalue_tolerance: float | None = None
 
     if method == "covariance":
         covariance = dsyrk(
@@ -141,9 +144,28 @@ def principal_component_analysis(
         )
         eigenvalues, eigenvectors = symmetric_eigendecomposition(covariance)
 
-        # EIGH returns ascending eigenvalues and stores eigenvectors in columns.
-        # Reverse the order so components are ordered by decreasing variance.
-        all_explained_variance = np.maximum(eigenvalues[::-1], 0.0)
+        # Small covariance eigenvalues can be dominated by roundoff.
+        eigenvalue_scale = float(np.max(np.abs(eigenvalues)))
+        covariance_eigenvalue_tolerance = (
+            max(covariance.shape)
+            * np.finfo(np.float64).eps
+            * eigenvalue_scale
+        )
+
+        if np.any(eigenvalues < -covariance_eigenvalue_tolerance):
+            raise FloatingPointError(
+                "Covariance eigendecomposition produced a materially "
+                "negative eigenvalue."
+            )
+
+        stable_eigenvalues = np.where(
+            eigenvalues > covariance_eigenvalue_tolerance,
+            eigenvalues,
+            0.0,
+        )
+
+        # EIGH orders eigenvalues increasingly; PCA needs decreasing order.
+        all_explained_variance = stable_eigenvalues[::-1]
         all_components = eigenvectors[:, ::-1].T.copy()
 
         with np.errstate(over="ignore", invalid="ignore"):
@@ -209,4 +231,5 @@ def principal_component_analysis(
         ),
         total_variance=total_variance,
         method=method,
+        covariance_eigenvalue_tolerance=covariance_eigenvalue_tolerance,
     )

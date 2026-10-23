@@ -190,3 +190,56 @@ def test_pca_rejects_complex_input() -> None:
 
     with pytest.raises(ValueError, match="real values"):
         principal_component_analysis(a)
+
+def test_covariance_pca_clips_roundoff_eigenvalue_for_exact_rank_deficiency() -> None:
+    rng = np.random.default_rng(20261023)
+    a = rng.standard_normal((30, 4))
+    a[:, -1] = a[:, 0]
+
+    covariance_result = principal_component_analysis(
+        a,
+        method="covariance",
+    )
+    direct_svd_result = principal_component_analysis(
+        a,
+        method="svd",
+    )
+
+    assert covariance_result.covariance_eigenvalue_tolerance is not None
+    assert covariance_result.singular_values[-1] == 0.0
+    assert covariance_result.explained_variance[-1] == 0.0
+    assert direct_svd_result.covariance_eigenvalue_tolerance is None
+    assert direct_svd_result.singular_values[-1] < 1e-12
+
+
+def test_covariance_pca_preserves_resolvable_small_singular_value() -> None:
+    rng = np.random.default_rng(20261024)
+
+    left_random = rng.standard_normal((30, 4))
+    left_random -= np.mean(left_random, axis=0, keepdims=True)
+    left_vectors, _ = np.linalg.qr(left_random, mode="reduced")
+
+    right_random = rng.standard_normal((4, 4))
+    right_vectors, _ = np.linalg.qr(right_random)
+
+    target_singular_values = np.array([1.0, 0.1, 0.01, 1e-6])
+    a = (left_vectors * target_singular_values) @ right_vectors.T
+
+    covariance_result = principal_component_analysis(
+        a,
+        method="covariance",
+    )
+    direct_svd_result = principal_component_analysis(
+        a,
+        method="svd",
+    )
+
+    assert covariance_result.singular_values[-1] > 0.0
+    relative_error = abs(
+        covariance_result.singular_values[-1]
+        - direct_svd_result.singular_values[-1]
+    ) / direct_svd_result.singular_values[-1]
+
+    # Forming X.T @ X can amplify relative error in small singular values.
+    # For this matrix, require the error to remain below 0.1%.
+    assert relative_error < 1e-3
