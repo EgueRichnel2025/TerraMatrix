@@ -1,0 +1,5162 @@
+{
+  "environment": {
+    "captured_at_utc": "2026-10-23T10:42:28.445370+00:00",
+    "project": {
+      "name": "terramatrix",
+      "version": "0.1.0"
+    },
+    "runtime": {
+      "blas_backend_status": "single_blas_library_detected",
+      "blas_backends": [
+        "Intel MKL / oneMKL"
+      ],
+      "blas_library_count": 1,
+      "libraries": [
+        {
+          "architecture": null,
+          "filepath": "C:\\Users\\HP-Pro\\miniforge3\\envs\\terramatrix-mkl-match\\Library\\bin\\mkl_rt.3.dll",
+          "internal_api": "mkl",
+          "name": "Intel MKL / oneMKL",
+          "num_threads": 10,
+          "prefix": "mkl_rt",
+          "threading_layer": "intel",
+          "user_api": "blas",
+          "version": "2026.2-Product"
+        }
+      ],
+      "numpy_version": "2.5.4",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_implementation": "CPython",
+      "python_version": "3.12.15",
+      "scipy_version": "1.18.1"
+    },
+    "schema_version": 1,
+    "source_control": {
+      "commit": "2e686d440f16326fcb9417baa87a47a8d0864df5",
+      "working_tree_clean": false
+    }
+  },
+  "experiments": [
+    {
+      "case": "well_conditioned",
+      "experiment_family": "TM-LS-01",
+      "experiment_id": "TM-LS-01",
+      "matrix": {
+        "dtype": "float64",
+        "frobenius_norm": 3.422064627646514,
+        "response_l2_norm": 3.1346972803591533,
+        "sha256": "e5516cbe0d472790109adf376e5061527e4fbe36eec60939fbb3071d4b8c0062",
+        "shape": [
+          1000,
+          20
+        ]
+      },
+      "matrix_generation": {
+        "algorithm": "orthogonal_factors_with_prescribed_spectrum",
+        "prescribed_condition_number_2": 2.0,
+        "prescribed_singular_values": [
+          1.0,
+          0.9736842105263158,
+          0.9473684210526316,
+          0.9210526315789473,
+          0.8947368421052632,
+          0.868421052631579,
+          0.8421052631578947,
+          0.8157894736842105,
+          0.7894736842105263,
+          0.7631578947368421,
+          0.736842105263158,
+          0.7105263157894737,
+          0.6842105263157895,
+          0.6578947368421053,
+          0.631578947368421,
+          0.6052631578947368,
+          0.5789473684210527,
+          0.5526315789473685,
+          0.5263157894736843,
+          0.5
+        ]
+      },
+      "methods": {
+        "normal_equations": {
+          "metrics": {
+            "coefficient_norm_2": 3.8623596271226774,
+            "coefficients": [
+              -0.5225429828650366,
+              -0.5460467509096973,
+              0.4209937068718832,
+              -0.8444273465803731,
+              -1.2363774160766556,
+              -0.7658752279302823,
+              0.7095058848040497,
+              0.4933127064656544,
+              -0.8389433884650971,
+              -0.7855766912225696,
+              -0.20314209516896356,
+              0.5899513155068319,
+              -0.05874850346235748,
+              0.09767701817044883,
+              -1.4680513960857842,
+              -0.761526588394352,
+              1.3017348649529688,
+              1.9296922968185828,
+              -0.04285131955910842,
+              -0.8461337451451604
+            ],
+            "least_squares_gradient_norm_2": 6.450890368508053e-16,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 0.0017862687707197423,
+            "relative_residual": 0.009936857256799776,
+            "relative_stationarity_measure": 2.0709756990892485e-14,
+            "residual_norm_2": 0.031149039418207375
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 0.0016267249999999999,
+            "median_seconds": 0.00171455,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0021667,
+              0.0005651,
+              0.0022107,
+              0.002656,
+              0.0021032,
+              0.0022301,
+              0.0023812,
+              0.0027254,
+              0.0013469,
+              0.0006516,
+              0.0007337,
+              0.0024867,
+              0.0025434,
+              0.0008033,
+              0.0008794,
+              0.0006098,
+              0.0020822,
+              0.0005105,
+              0.0003526,
+              0.0003362
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0021667,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005651,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0022107,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.002656,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0021032,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0022301,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0023812,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0027254,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0013469,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006516,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007337,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0024867,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0025434,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008033,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008794,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006098,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0020822,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005105,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003526,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003362,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0025692,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0018503,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0019506,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_pivoted": {
+          "metrics": {
+            "coefficient_norm_2": 3.862359627122679,
+            "coefficients": [
+              -0.5225429828650366,
+              -0.5460467509096975,
+              0.42099370687188337,
+              -0.8444273465803733,
+              -1.2363774160766567,
+              -0.7658752279302823,
+              0.709505884804049,
+              0.4933127064656545,
+              -0.8389433884650971,
+              -0.7855766912225699,
+              -0.20314209516896325,
+              0.5899513155068322,
+              -0.05874850346235792,
+              0.0976770181704486,
+              -1.4680513960857857,
+              -0.7615265883943525,
+              1.3017348649529685,
+              1.929692296818583,
+              -0.042851319559108605,
+              -0.8461337451451608
+            ],
+            "least_squares_gradient_norm_2": 7.095104174174788e-16,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 0.0017862687707199839,
+            "relative_residual": 0.009936857256799778,
+            "relative_stationarity_measure": 2.2777922872406555e-14,
+            "residual_norm_2": 0.031149039418207382
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "column_pivoted_qr_diagonal",
+            "rank_tolerance": 1.8470116935604612e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 0.00013027500000000012,
+            "median_seconds": 0.00062445,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0007278,
+              0.0007337,
+              0.0008977,
+              0.0009577,
+              0.0006614,
+              0.0006602,
+              0.0006486,
+              0.0006195,
+              0.0006267,
+              0.0006222,
+              0.0005716,
+              0.0005725,
+              0.0005468,
+              0.0005991,
+              0.0006033,
+              0.0005987,
+              0.0006068,
+              0.0005278,
+              0.0007792,
+              0.0008979
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0007278,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007337,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008977,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0009577,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006614,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006602,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006486,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006195,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006267,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006222,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005716,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005725,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005468,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005991,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006033,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005987,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006068,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005278,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007792,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008979,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0015838,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0007695,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0006205,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_unpivoted": {
+          "metrics": {
+            "coefficient_norm_2": 3.862359627122677,
+            "coefficients": [
+              -0.5225429828650366,
+              -0.5460467509096976,
+              0.420993706871883,
+              -0.8444273465803726,
+              -1.236377416076656,
+              -0.7658752279302828,
+              0.7095058848040491,
+              0.493312706465654,
+              -0.8389433884650971,
+              -0.7855766912225693,
+              -0.2031420951689634,
+              0.5899513155068319,
+              -0.058748503462357826,
+              0.09767701817044912,
+              -1.4680513960857848,
+              -0.7615265883943525,
+              1.3017348649529674,
+              1.929692296818582,
+              -0.042851319559108474,
+              -0.8461337451451606
+            ],
+            "least_squares_gradient_norm_2": 1.1341758655322537e-15,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 0.001786268770720028,
+            "relative_residual": 0.009936857256799778,
+            "relative_stationarity_measure": 3.641126297041766e-14,
+            "residual_norm_2": 0.031149039418207382
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 1.5550000000000026e-05,
+            "median_seconds": 0.00025854999999999997,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0002891,
+              0.000297,
+              0.0002907,
+              0.0002666,
+              0.0002623,
+              0.0002613,
+              0.0002648,
+              0.0002651,
+              0.0002549,
+              0.0002749,
+              0.0002558,
+              0.000251,
+              0.0002498,
+              0.0002515,
+              0.0002509,
+              0.0002501,
+              0.0002665,
+              0.0002553,
+              0.0002498,
+              0.0002485
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0002891,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000297,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002907,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002666,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002623,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002613,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002648,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002651,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002549,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002749,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002558,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000251,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002498,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002515,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002509,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002501,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002665,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002553,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002498,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002485,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0006027,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0003379,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0002999,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "svd_pseudoinverse": {
+          "metrics": {
+            "coefficient_norm_2": 3.8623596271226757,
+            "coefficients": [
+              -0.522542982865036,
+              -0.5460467509096987,
+              0.4209937068718842,
+              -0.8444273465803722,
+              -1.2363774160766572,
+              -0.76587522793028,
+              0.709505884804048,
+              0.4933127064656544,
+              -0.8389433884650974,
+              -0.7855766912225679,
+              -0.20314209516896434,
+              0.5899513155068318,
+              -0.05874850346235738,
+              0.09767701817045142,
+              -1.468051396085785,
+              -0.7615265883943523,
+              1.3017348649529676,
+              1.9296922968185808,
+              -0.04285131955910758,
+              -0.8461337451451583
+            ],
+            "least_squares_gradient_norm_2": 3.953359253961201e-15,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 0.0017862687707202484,
+            "relative_residual": 0.009936857256799783,
+            "relative_stationarity_measure": 1.2691753350346866e-13,
+            "residual_norm_2": 0.0311490394182074
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "svd_singular_values",
+            "rank_tolerance": 2.2204460492503116e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 4.692499999999996e-05,
+            "median_seconds": 0.00050435,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0005868,
+              0.0004988,
+              0.0005196,
+              0.0006147,
+              0.0005317,
+              0.000585,
+              0.0005041,
+              0.0005223,
+              0.0005789,
+              0.00053,
+              0.0004969,
+              0.000486,
+              0.0004676,
+              0.000476,
+              0.0004541,
+              0.0005213,
+              0.0004993,
+              0.0004596,
+              0.0004565,
+              0.0005046
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0005868,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004988,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005196,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006147,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005317,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000585,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005041,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005223,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005789,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.00053,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004969,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000486,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004676,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000476,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004541,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005213,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004993,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004596,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004565,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005046,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0008926,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0005949,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0005743,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "noise": {
+        "measured_l2_norm": 0.03145025328419899,
+        "sha256": "26a48252abad25b42bcb91fb5ad2b62d372476dda595afc9d30f8b4128a46a0b",
+        "standard_deviation": 0.001
+      },
+      "random_seed": 20261022,
+      "rank_diagnostics": {
+        "condition_number_status": "finite",
+        "expectation_matches": true,
+        "expected_numerical_rank": 20,
+        "largest_singular_value": 0.9999999999999993,
+        "maximum_rank": 20,
+        "measured_condition_number_2": 1.9999999999999964,
+        "numerical_rank": 20,
+        "rank_tolerance": 2.2204460492503116e-13,
+        "smallest_singular_value": 0.5000000000000006,
+        "target_condition_number_2": null
+      },
+      "reference_coefficients": [
+        -0.5217388268990664,
+        -0.5437387107924776,
+        0.42054138650186557,
+        -0.8464187477211395,
+        -1.2354930572958667,
+        -0.7648863984350992,
+        0.7123530312927423,
+        0.4919035543568362,
+        -0.8398848981017791,
+        -0.7841028772672203,
+        -0.20482004977197807,
+        0.5906049838494665,
+        -0.05922694619629289,
+        0.09768643841390455,
+        -1.466114810718042,
+        -0.7619068397618998,
+        1.3048231722862376,
+        1.9289038093304562,
+        -0.043710274757779825,
+        -0.8482049660452021
+      ],
+      "reference_coefficients_sha256": "7c3c6c44e2a7c89bd658e96be3ce333dfdb05906f0297fdd6642e438196d4541",
+      "response_sha256": "5784ae4931a0582be789703b9cdaaf06cecc3e155499194cc5a30f3dd25536e0"
+    },
+    {
+      "case": "ill_conditioned",
+      "experiment_family": "TM-LS-02",
+      "experiment_id": "TM-LS-02-kappa-1e2",
+      "matrix": {
+        "dtype": "float64",
+        "frobenius_norm": 1.6133745303080795,
+        "response_l2_norm": 1.5139771728074014,
+        "sha256": "8391b85f3097e59f6ddc6d962b34c6b9745345f6dba47ff2427e01f4aa4f7a53",
+        "shape": [
+          1000,
+          20
+        ]
+      },
+      "matrix_generation": {
+        "algorithm": "orthogonal_factors_with_prescribed_spectrum",
+        "prescribed_condition_number_2": 100.0,
+        "prescribed_singular_values": [
+          1.0,
+          0.7847599703514613,
+          0.6158482110660264,
+          0.4832930238571753,
+          0.37926901907322497,
+          0.29763514416313186,
+          0.23357214690901226,
+          0.1832980710832436,
+          0.14384498882876628,
+          0.11288378916846892,
+          0.08858667904100828,
+          0.06951927961775606,
+          0.0545559478116852,
+          0.04281332398719396,
+          0.033598182862837826,
+          0.026366508987303583,
+          0.0206913808111479,
+          0.016237767391887224,
+          0.012742749857031341,
+          0.01
+        ]
+      },
+      "methods": {
+        "normal_equations": {
+          "metrics": {
+            "coefficient_norm_2": 3.898151403111987,
+            "coefficients": [
+              -0.5572823123356082,
+              -0.6136967535194356,
+              0.42518779442148225,
+              -0.7805660546645161,
+              -1.2596155904422084,
+              -0.8255838525601351,
+              0.6616078807817594,
+              0.5491145558237176,
+              -0.7776141198196521,
+              -0.7819003922446265,
+              -0.15497382082569455,
+              0.5896261340785515,
+              -0.05953439626294833,
+              0.07713049435258254,
+              -1.546129213159244,
+              -0.8017237280821304,
+              1.2058428732459816,
+              1.9825393603760466,
+              -0.05659225047830387,
+              -0.832248377162473
+            ],
+            "least_squares_gradient_norm_2": 2.242873387589905e-16,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 0.05701495744281382,
+            "relative_residual": 0.020574312464993798,
+            "relative_stationarity_measure": 7.200457636837726e-15,
+            "residual_norm_2": 0.031149039418207385
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 0.00014427500000000002,
+            "median_seconds": 0.0003974,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0004075,
+              0.0004128,
+              0.0003771,
+              0.0002829,
+              0.0002579,
+              0.000364,
+              0.0004422,
+              0.0011456,
+              0.0005758,
+              0.0005823,
+              0.0006166,
+              0.0003964,
+              0.0005492,
+              0.0003386,
+              0.0002508,
+              0.0002327,
+              0.0002804,
+              0.0004075,
+              0.0003906,
+              0.0003984
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0004075,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004128,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003771,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002829,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002579,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000364,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004422,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0011456,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005758,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005823,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006166,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003964,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005492,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003386,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002508,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002327,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002804,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004075,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003906,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003984,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0003855,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0002925,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0002774,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_pivoted": {
+          "metrics": {
+            "coefficient_norm_2": 3.8981514031118567,
+            "coefficients": [
+              -0.5572823123354871,
+              -0.6136967535193611,
+              0.4251877944214697,
+              -0.780566054664562,
+              -1.2596155904421782,
+              -0.8255838525601247,
+              0.6616078807817779,
+              0.5491145558235462,
+              -0.7776141198197749,
+              -0.7819003922445507,
+              -0.15497382082573052,
+              0.5896261340785314,
+              -0.059534396262917254,
+              0.07713049435259443,
+              -1.546129213159094,
+              -0.8017237280820744,
+              1.205842873246196,
+              1.982539360375933,
+              -0.05659225047832766,
+              -0.8322483771623737
+            ],
+            "least_squares_gradient_norm_2": 1.912369083148778e-16,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 0.057014957442726985,
+            "relative_residual": 0.020574312464993805,
+            "relative_stationarity_measure": 6.1394159141580226e-15,
+            "residual_norm_2": 0.031149039418207396
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "column_pivoted_qr_diagonal",
+            "rank_tolerance": 1.1440173981735372e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 0.0001550499999999999,
+            "median_seconds": 0.0006327500000000001,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0007015,
+              0.0010689,
+              0.0007758,
+              0.0005925,
+              0.0006372,
+              0.0006852,
+              0.0008691,
+              0.0005413,
+              0.0004937,
+              0.0005369,
+              0.0005323,
+              0.0005533,
+              0.0005628,
+              0.0006283,
+              0.0006074,
+              0.0006746,
+              0.0007574,
+              0.0006594,
+              0.0010338,
+              0.000622
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0007015,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0010689,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007758,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005925,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006372,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006852,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008691,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005413,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004937,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005369,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005323,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005533,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005628,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006283,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006074,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006746,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007574,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006594,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0010338,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000622,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0008108,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0011456,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0005668,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_unpivoted": {
+          "metrics": {
+            "coefficient_norm_2": 3.898151403111863,
+            "coefficients": [
+              -0.5572823123354906,
+              -0.6136967535193688,
+              0.42518779442147064,
+              -0.780566054664558,
+              -1.2596155904421813,
+              -0.8255838525601292,
+              0.6616078807817725,
+              0.5491145558235498,
+              -0.7776141198197717,
+              -0.7819003922445484,
+              -0.15497382082572472,
+              0.5896261340785314,
+              -0.05953439626292175,
+              0.07713049435259102,
+              -1.5461292131591022,
+              -0.8017237280820791,
+              1.205842873246191,
+              1.9825393603759356,
+              -0.05659225047833423,
+              -0.8322483771623794
+            ],
+            "least_squares_gradient_norm_2": 3.081569790782409e-16,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 0.057014957442731475,
+            "relative_residual": 0.0205743124649938,
+            "relative_stationarity_measure": 9.89298497911675e-15,
+            "residual_norm_2": 0.031149039418207392
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 1.227499999999996e-05,
+            "median_seconds": 0.000259,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0002611,
+              0.0002564,
+              0.0002868,
+              0.0002584,
+              0.0002625,
+              0.0002944,
+              0.0002607,
+              0.0002565,
+              0.0002558,
+              0.0002736,
+              0.0002669,
+              0.0002582,
+              0.0002565,
+              0.0002551,
+              0.0002549,
+              0.0002536,
+              0.000256,
+              0.0002766,
+              0.0002596,
+              0.0002881
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0002611,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002564,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002868,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002584,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002625,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002944,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002607,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002565,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002558,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002736,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002669,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002582,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002565,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002551,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002549,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002536,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000256,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002766,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002596,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002881,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0003702,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0002821,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0002627,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "svd_pseudoinverse": {
+          "metrics": {
+            "coefficient_norm_2": 3.8981514031118616,
+            "coefficients": [
+              -0.5572823123354921,
+              -0.6136967535193651,
+              0.42518779442146953,
+              -0.7805660546645617,
+              -1.2596155904421833,
+              -0.8255838525601333,
+              0.6616078807817749,
+              0.5491145558235508,
+              -0.7776141198197719,
+              -0.7819003922445465,
+              -0.15497382082572744,
+              0.589626134078537,
+              -0.05953439626292212,
+              0.07713049435259253,
+              -1.5461292131590945,
+              -0.8017237280820799,
+              1.205842873246191,
+              1.9825393603759325,
+              -0.05659225047833,
+              -0.8322483771623788
+            ],
+            "least_squares_gradient_norm_2": 1.2645865230738748e-15,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 0.05701495744273005,
+            "relative_residual": 0.020574312464993798,
+            "relative_stationarity_measure": 4.0597930038725175e-14,
+            "residual_norm_2": 0.03114903941820739
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "svd_singular_values",
+            "rank_tolerance": 2.2204460492503103e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 0.00011970000000000004,
+            "median_seconds": 0.0004464,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0004256,
+              0.0004539,
+              0.0005898,
+              0.0005052,
+              0.0005333,
+              0.0004673,
+              0.0004241,
+              0.0004278,
+              0.000434,
+              0.0004253,
+              0.0004198,
+              0.0004222,
+              0.000443,
+              0.0004498,
+              0.0004413,
+              0.0004352,
+              0.0005879,
+              0.0007256,
+              0.0010063,
+              0.0006388
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0004256,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004539,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005898,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005052,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005333,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004673,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004241,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004278,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000434,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004253,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004198,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004222,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000443,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004498,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004413,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004352,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005879,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007256,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0010063,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006388,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.000578,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0004749,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.000448,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "noise": {
+        "measured_l2_norm": 0.03145025328419899,
+        "sha256": "26a48252abad25b42bcb91fb5ad2b62d372476dda595afc9d30f8b4128a46a0b",
+        "standard_deviation": 0.001
+      },
+      "random_seed": 20261022,
+      "rank_diagnostics": {
+        "condition_number_status": "finite",
+        "expectation_matches": true,
+        "expected_numerical_rank": 20,
+        "largest_singular_value": 0.9999999999999988,
+        "maximum_rank": 20,
+        "measured_condition_number_2": 99.99999999999994,
+        "numerical_rank": 20,
+        "rank_tolerance": 2.2204460492503103e-13,
+        "smallest_singular_value": 0.009999999999999993,
+        "target_condition_number_2": 100.0
+      },
+      "reference_coefficients": [
+        -0.5217388268990664,
+        -0.5437387107924776,
+        0.42054138650186557,
+        -0.8464187477211395,
+        -1.2354930572958667,
+        -0.7648863984350992,
+        0.7123530312927423,
+        0.4919035543568362,
+        -0.8398848981017791,
+        -0.7841028772672203,
+        -0.20482004977197807,
+        0.5906049838494665,
+        -0.05922694619629289,
+        0.09768643841390455,
+        -1.466114810718042,
+        -0.7619068397618998,
+        1.3048231722862376,
+        1.9289038093304562,
+        -0.043710274757779825,
+        -0.8482049660452021
+      ],
+      "reference_coefficients_sha256": "7c3c6c44e2a7c89bd658e96be3ce333dfdb05906f0297fdd6642e438196d4541",
+      "response_sha256": "5d9011eeed83dab2d96b21c2fad4966ba6596da30ee7d3d7c8005679c7e666ee"
+    },
+    {
+      "case": "ill_conditioned",
+      "experiment_family": "TM-LS-02",
+      "experiment_id": "TM-LS-02-kappa-1e4",
+      "matrix": {
+        "dtype": "float64",
+        "frobenius_norm": 1.2692532622567103,
+        "response_l2_norm": 1.0494241355815381,
+        "sha256": "43063051dc782cd2f4c9e644e3f5b61e354062c4a7bd16308a5bc2f72bb63a79",
+        "shape": [
+          1000,
+          20
+        ]
+      },
+      "matrix_generation": {
+        "algorithm": "orthogonal_factors_with_prescribed_spectrum",
+        "prescribed_condition_number_2": 10000.0,
+        "prescribed_singular_values": [
+          1.0,
+          0.6158482110660264,
+          0.37926901907322497,
+          0.23357214690901226,
+          0.14384498882876628,
+          0.08858667904100828,
+          0.0545559478116852,
+          0.033598182862837826,
+          0.0206913808111479,
+          0.012742749857031341,
+          0.007847599703514615,
+          0.004832930238571752,
+          0.002976351441631319,
+          0.0018329807108324375,
+          0.0011288378916846896,
+          0.0006951927961775605,
+          0.00042813323987193956,
+          0.0002636650898730361,
+          0.00016237767391887227,
+          0.0001
+        ]
+      },
+      "methods": {
+        "normal_equations": {
+          "metrics": {
+            "coefficient_norm_2": 20.86103393088818,
+            "coefficients": [
+              -4.506747167535012,
+              -7.831475480213702,
+              0.8682277088464352,
+              4.152105905943851,
+              -3.395892888549502,
+              -6.300640616559602,
+              -2.6172341347402526,
+              4.497131148297378,
+              4.483753481676568,
+              1.2506923538694457,
+              4.077210645521088,
+              1.812443232940714,
+              -1.7141328164651617,
+              -2.2233024401383625,
+              -8.664360948022013,
+              -6.12877317673678,
+              -6.094755552622902,
+              6.436213446980849,
+              -3.490935741036159,
+              -2.0959867882464036
+            ],
+            "least_squares_gradient_norm_2": 8.554218207249913e-16,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 5.0874596623450925,
+            "relative_residual": 0.029682030708152323,
+            "relative_stationarity_measure": 2.746222152279199e-14,
+            "residual_norm_2": 0.031149039418207423
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 0.001196625,
+            "median_seconds": 0.0006688499999999999,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.00243,
+              0.0007865,
+              0.0012945,
+              0.0028325,
+              0.0030521,
+              0.0032308,
+              0.0012364,
+              0.0025574,
+              0.0010088,
+              0.0009574,
+              0.0005512,
+              0.0003326,
+              0.0004546,
+              0.000351,
+              0.0003189,
+              0.000392,
+              0.0005222,
+              0.0004342,
+              0.0002938,
+              0.0002916
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.00243,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007865,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0012945,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0028325,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0030521,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0032308,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0012364,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0025574,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0010088,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0009574,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005512,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003326,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004546,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000351,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003189,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000392,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005222,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004342,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002938,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002916,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0029849,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.001862,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0025075,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_pivoted": {
+          "metrics": {
+            "coefficient_norm_2": 20.86103389580859,
+            "coefficients": [
+              -4.506747161690918,
+              -7.831475468465173,
+              0.8682277083211692,
+              4.15210590044435,
+              -3.395892883038114,
+              -6.30064060894209,
+              -2.6172341252345004,
+              4.49713114038659,
+              4.483753474992375,
+              1.2506923515156623,
+              4.077210637531359,
+              1.8124432318780452,
+              -1.7141328095259718,
+              -2.223302435677143,
+              -8.664360930469597,
+              -6.128773166221154,
+              -6.0947555414252035,
+              6.436213442579028,
+              -3.4909357300069517,
+              -2.095986777675876
+            ],
+            "least_squares_gradient_norm_2": 5.908010182975804e-16,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 5.08745965327551,
+            "relative_residual": 0.029682030708152327,
+            "relative_stationarity_measure": 1.8966909713184997e-14,
+            "residual_norm_2": 0.031149039418207427
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "column_pivoted_qr_diagonal",
+            "rank_tolerance": 1.0813404951825417e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 0.000172925,
+            "median_seconds": 0.00064395,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0008957,
+              0.0006005,
+              0.0006234,
+              0.0006078,
+              0.0007521,
+              0.0006463,
+              0.0006107,
+              0.0005922,
+              0.0006038,
+              0.000524,
+              0.0005075,
+              0.0006416,
+              0.0007199,
+              0.0006619,
+              0.0006237,
+              0.0006744,
+              0.0008626,
+              0.0009425,
+              0.0009795,
+              0.0012217
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0008957,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006005,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006234,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006078,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007521,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006463,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006107,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005922,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006038,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000524,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005075,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006416,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007199,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006619,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006237,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006744,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008626,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0009425,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0009795,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0012217,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0008248,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0007202,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0007266,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_unpivoted": {
+          "metrics": {
+            "coefficient_norm_2": 20.86103389580556,
+            "coefficients": [
+              -4.5067471616897095,
+              -7.831475468462963,
+              0.8682277083210106,
+              4.152105900442867,
+              -3.3958928830379422,
+              -6.300640608940435,
+              -2.617234125234977,
+              4.497131140387168,
+              4.4837534749911825,
+              1.2506923515141692,
+              4.077210637530498,
+              1.8124432318772328,
+              -1.7141328095262083,
+              -2.223302435676635,
+              -8.664360930469908,
+              -6.128773166220019,
+              -6.0947555414244325,
+              6.436213442577873,
+              -3.490935730006817,
+              -2.0959867776772168
+            ],
+            "least_squares_gradient_norm_2": 1.0767362486496237e-15,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 5.087459653274687,
+            "relative_residual": 0.029682030708152323,
+            "relative_stationarity_measure": 3.456723766641241e-14,
+            "residual_norm_2": 0.03114903941820742
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 1.6925000000000045e-05,
+            "median_seconds": 0.0002783,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0002747,
+              0.0002802,
+              0.0002812,
+              0.00027,
+              0.0002631,
+              0.0002853,
+              0.0002814,
+              0.000268,
+              0.0002689,
+              0.0002674,
+              0.000273,
+              0.0002665,
+              0.0002804,
+              0.000293,
+              0.0002982,
+              0.0002764,
+              0.0002973,
+              0.000294,
+              0.0002694,
+              0.0002889
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0002747,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002802,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002812,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.00027,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002631,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002853,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002814,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000268,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002689,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002674,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000273,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002665,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002804,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000293,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002982,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002764,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002973,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000294,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002694,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002889,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0003963,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0003221,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0003017,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "svd_pseudoinverse": {
+          "metrics": {
+            "coefficient_norm_2": 20.86103389580585,
+            "coefficients": [
+              -4.506747161689789,
+              -7.831475468463061,
+              0.8682277083210101,
+              4.152105900442878,
+              -3.395892883038011,
+              -6.300640608940515,
+              -2.617234125235086,
+              4.49713114038718,
+              4.48375347499122,
+              1.2506923515142059,
+              4.077210637530585,
+              1.8124432318772588,
+              -1.714132809526307,
+              -2.2233024356766755,
+              -8.664360930470066,
+              -6.128773166220135,
+              -6.094755541424481,
+              6.436213442577871,
+              -3.490935730006935,
+              -2.0959867776773184
+            ],
+            "least_squares_gradient_norm_2": 1.6915639136578053e-15,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 5.087459653274761,
+            "relative_residual": 0.029682030708152306,
+            "relative_stationarity_measure": 5.4305492087471713e-14,
+            "residual_norm_2": 0.031149039418207403
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "svd_singular_values",
+            "rank_tolerance": 2.2204460492503113e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 0.00014437499999999997,
+            "median_seconds": 0.0005027,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0005813,
+              0.000516,
+              0.0005682,
+              0.0005419,
+              0.0005607,
+              0.0006022,
+              0.0005727,
+              0.0004894,
+              0.0004542,
+              0.0004388,
+              0.0004723,
+              0.000428,
+              0.0004212,
+              0.0004252,
+              0.0004313,
+              0.0004248,
+              0.0004184,
+              0.0005998,
+              0.0005945,
+              0.0006233
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0005813,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000516,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005682,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005419,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005607,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006022,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005727,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004894,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004542,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004388,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004723,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000428,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004212,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004252,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004313,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004248,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004184,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005998,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005945,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006233,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0007959,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0006484,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0006063,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "noise": {
+        "measured_l2_norm": 0.03145025328419899,
+        "sha256": "26a48252abad25b42bcb91fb5ad2b62d372476dda595afc9d30f8b4128a46a0b",
+        "standard_deviation": 0.001
+      },
+      "random_seed": 20261022,
+      "rank_diagnostics": {
+        "condition_number_status": "finite",
+        "expectation_matches": true,
+        "expected_numerical_rank": 20,
+        "largest_singular_value": 0.9999999999999992,
+        "maximum_rank": 20,
+        "measured_condition_number_2": 9999.99999999991,
+        "numerical_rank": 20,
+        "rank_tolerance": 2.2204460492503113e-13,
+        "smallest_singular_value": 0.00010000000000000082,
+        "target_condition_number_2": 10000.0
+      },
+      "reference_coefficients": [
+        -0.5217388268990664,
+        -0.5437387107924776,
+        0.42054138650186557,
+        -0.8464187477211395,
+        -1.2354930572958667,
+        -0.7648863984350992,
+        0.7123530312927423,
+        0.4919035543568362,
+        -0.8398848981017791,
+        -0.7841028772672203,
+        -0.20482004977197807,
+        0.5906049838494665,
+        -0.05922694619629289,
+        0.09768643841390455,
+        -1.466114810718042,
+        -0.7619068397618998,
+        1.3048231722862376,
+        1.9289038093304562,
+        -0.043710274757779825,
+        -0.8482049660452021
+      ],
+      "reference_coefficients_sha256": "7c3c6c44e2a7c89bd658e96be3ce333dfdb05906f0297fdd6642e438196d4541",
+      "response_sha256": "dbd7fb72f33d8a747e4af82b4ba7fe82d0519608cbd861312a07fc6ab466dfc3"
+    },
+    {
+      "case": "ill_conditioned",
+      "experiment_family": "TM-LS-02",
+      "experiment_id": "TM-LS-02-kappa-1e6",
+      "matrix": {
+        "dtype": "float64",
+        "frobenius_norm": 1.1422583997395996,
+        "response_l2_norm": 0.8146918763905602,
+        "sha256": "810f5cea8a59ead86a7bef6e3593892c7c03b21cfe3a2eb34fbf02b710547b05",
+        "shape": [
+          1000,
+          20
+        ]
+      },
+      "matrix_generation": {
+        "algorithm": "orthogonal_factors_with_prescribed_spectrum",
+        "prescribed_condition_number_2": 1000000.0,
+        "prescribed_singular_values": [
+          1.0,
+          0.4832930238571753,
+          0.23357214690901226,
+          0.11288378916846892,
+          0.0545559478116852,
+          0.026366508987303583,
+          0.012742749857031341,
+          0.006158482110660267,
+          0.002976351441631319,
+          0.0014384498882876629,
+          0.0006951927961775605,
+          0.00033598182862837843,
+          0.00016237767391887227,
+          7.847599703514623e-05,
+          3.792690190732254e-05,
+          1.8329807108324375e-05,
+          8.858667904100832e-06,
+          4.281332398719396e-06,
+          2.06913808111479e-06,
+          1e-06
+        ]
+      },
+      "methods": {
+        "normal_equations": {
+          "metrics": {
+            "coefficient_norm_2": 1906.8276251179927,
+            "coefficients": [
+              -405.65060233175427,
+              -755.3588982974313,
+              40.90107617111855,
+              437.8278037711764,
+              -231.67360508643898,
+              -524.6974025709457,
+              -320.5770293865138,
+              303.71877976766217,
+              465.19967240003564,
+              249.99057150434865,
+              431.7005595261674,
+              141.11136701557757,
+              -227.2470625523125,
+              -238.05796747879208,
+              -700.5284423807922,
+              -569.9869368719967,
+              -627.7290756405047,
+              381.03360651454267,
+              -425.1254149460428,
+              -233.29684294308734
+            ],
+            "least_squares_gradient_norm_2": 6.752652675795947e-14,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 493.39476176156245,
+            "relative_residual": 0.038234135285870975,
+            "relative_stationarity_measure": 2.1678526214348776e-12,
+            "residual_norm_2": 0.031149039418216753
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 8.934999999999998e-05,
+            "median_seconds": 0.00036605,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0005606,
+              0.0003436,
+              0.0003526,
+              0.0005074,
+              0.0004316,
+              0.0003444,
+              0.0005518,
+              0.0004394,
+              0.0003411,
+              0.0003585,
+              0.0004617,
+              0.0004156,
+              0.0003694,
+              0.0003627,
+              0.0002865,
+              0.0003012,
+              0.0003701,
+              0.0002816,
+              0.0003596,
+              0.000431
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0005606,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003436,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003526,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005074,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004316,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003444,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005518,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004394,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003411,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003585,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004617,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004156,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003694,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003627,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002865,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003012,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003701,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002816,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003596,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000431,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0004994,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.000502,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0004283,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_pivoted": {
+          "metrics": {
+            "coefficient_norm_2": 1906.80753514999,
+            "coefficients": [
+              -405.6465619363852,
+              -755.3506736222225,
+              40.900934295133005,
+              437.8235513538022,
+              -231.67089142249,
+              -524.6918121710111,
+              -320.57310642432583,
+              303.7168331561506,
+              465.19544138465756,
+              249.98740051827903,
+              431.6956103189405,
+              141.10996402706178,
+              -227.2440846973865,
+              -238.05525758541947,
+              -700.5208888563016,
+              -569.9804792484998,
+              -627.7234815944704,
+              381.03043813651635,
+              -425.1199559218508,
+              -233.2936325602048
+            ],
+            "least_squares_gradient_norm_2": 1.6565711180428774e-13,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 493.389560875085,
+            "relative_residual": 0.03823413528586319,
+            "relative_stationarity_measure": 5.318209321968405e-12,
+            "residual_norm_2": 0.031149039418210407
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "column_pivoted_qr_diagonal",
+            "rank_tolerance": 1.0791792612094658e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 0.00025180000000000005,
+            "median_seconds": 0.00085805,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0006804,
+              0.0008012,
+              0.0006906,
+              0.0006571,
+              0.0006613,
+              0.0008824,
+              0.0009774,
+              0.0009157,
+              0.0006348,
+              0.0006436,
+              0.000691,
+              0.0010602,
+              0.000906,
+              0.0013991,
+              0.0017254,
+              0.0011724,
+              0.0006761,
+              0.0008745,
+              0.0008777,
+              0.0008416
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0006804,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008012,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006906,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006571,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006613,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008824,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0009774,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0009157,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006348,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006436,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000691,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0010602,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000906,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0013991,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0017254,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0011724,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006761,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008745,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008777,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008416,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0009596,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0006947,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0006691,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_unpivoted": {
+          "metrics": {
+            "coefficient_norm_2": 1906.8075348846492,
+            "coefficients": [
+              -405.6465618953572,
+              -755.350673525014,
+              40.90093429564419,
+              437.8235513061579,
+              -231.67089138360117,
+              -524.6918121026935,
+              -320.57310635460277,
+              303.71683312466195,
+              465.1954413387593,
+              249.98740048335222,
+              431.69561025221964,
+              141.1099640168486,
+              -227.2440846482252,
+              -238.05525754832192,
+              -700.5208887373326,
+              -569.9804791641803,
+              -627.7234815250833,
+              381.0304381057883,
+              -425.11995583513306,
+              -233.2936324984164
+            ],
+            "least_squares_gradient_norm_2": 2.1235229349417113e-13,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 493.3895608063966,
+            "relative_residual": 0.03823413528586156,
+            "relative_stationarity_measure": 6.817298300699269e-12,
+            "residual_norm_2": 0.031149039418209082
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 4.2250000000000024e-05,
+            "median_seconds": 0.00027404999999999997,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.000264,
+              0.0002623,
+              0.0002606,
+              0.0002594,
+              0.0002605,
+              0.0002529,
+              0.000276,
+              0.0002668,
+              0.0002677,
+              0.0002721,
+              0.0002775,
+              0.000282,
+              0.0003418,
+              0.0002998,
+              0.0003239,
+              0.0003393,
+              0.0003525,
+              0.0003584,
+              0.0002937,
+              0.0002716
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.000264,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002623,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002606,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002594,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002605,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002529,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000276,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002668,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002677,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002721,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002775,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000282,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003418,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002998,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003239,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003393,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003525,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003584,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002937,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002716,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0003703,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0003245,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0002811,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "svd_pseudoinverse": {
+          "metrics": {
+            "coefficient_norm_2": 1906.807534884627,
+            "coefficients": [
+              -405.6465618953535,
+              -755.3506735250078,
+              40.90093429564615,
+              437.82355130615616,
+              -231.67089138359552,
+              -524.6918121026895,
+              -320.5731063545943,
+              303.7168331246587,
+              465.1954413387555,
+              249.98740048335253,
+              431.69561025221486,
+              141.10996401684864,
+              -227.24408464821988,
+              -238.05525754831964,
+              -700.5208887373211,
+              -569.9804791641722,
+              -627.7234815250762,
+              381.03043810578725,
+              -425.11995583512635,
+              -233.29363249840623
+            ],
+            "least_squares_gradient_norm_2": 3.2138082415317896e-13,
+            "reference_coefficient_norm_2": 3.862730053166033,
+            "relative_coefficient_error_2": 493.3895608063908,
+            "relative_residual": 0.038234135285862565,
+            "relative_stationarity_measure": 1.0317519581849392e-11,
+            "residual_norm_2": 0.0311490394182099
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 20,
+            "method": "svd_singular_values",
+            "rank_tolerance": 2.220446049250311e-13
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 7.482499999999999e-05,
+            "median_seconds": 0.00044945,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0004434,
+              0.0004682,
+              0.0004658,
+              0.0004714,
+              0.0004523,
+              0.0004525,
+              0.0004307,
+              0.0004106,
+              0.0004388,
+              0.0004052,
+              0.0004466,
+              0.000417,
+              0.0004113,
+              0.0004209,
+              0.000417,
+              0.0007793,
+              0.0006813,
+              0.0008239,
+              0.0005648,
+              0.0005694
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0004434,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004682,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004658,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004714,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004523,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004525,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004307,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004106,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004388,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004052,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004466,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000417,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004113,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004209,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000417,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007793,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006813,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008239,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005648,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005694,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0005961,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0004772,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0004277,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "noise": {
+        "measured_l2_norm": 0.03145025328419899,
+        "sha256": "26a48252abad25b42bcb91fb5ad2b62d372476dda595afc9d30f8b4128a46a0b",
+        "standard_deviation": 0.001
+      },
+      "random_seed": 20261022,
+      "rank_diagnostics": {
+        "condition_number_status": "finite",
+        "expectation_matches": true,
+        "expected_numerical_rank": 20,
+        "largest_singular_value": 0.9999999999999991,
+        "maximum_rank": 20,
+        "measured_condition_number_2": 999999.9999933887,
+        "numerical_rank": 20,
+        "rank_tolerance": 2.220446049250311e-13,
+        "smallest_singular_value": 1.0000000000066104e-06,
+        "target_condition_number_2": 1000000.0
+      },
+      "reference_coefficients": [
+        -0.5217388268990664,
+        -0.5437387107924776,
+        0.42054138650186557,
+        -0.8464187477211395,
+        -1.2354930572958667,
+        -0.7648863984350992,
+        0.7123530312927423,
+        0.4919035543568362,
+        -0.8398848981017791,
+        -0.7841028772672203,
+        -0.20482004977197807,
+        0.5906049838494665,
+        -0.05922694619629289,
+        0.09768643841390455,
+        -1.466114810718042,
+        -0.7619068397618998,
+        1.3048231722862376,
+        1.9289038093304562,
+        -0.043710274757779825,
+        -0.8482049660452021
+      ],
+      "reference_coefficients_sha256": "7c3c6c44e2a7c89bd658e96be3ce333dfdb05906f0297fdd6642e438196d4541",
+      "response_sha256": "96c66a5bb7b0c1d312d12006ce971767636f682264844c4c11a5df9b6280066f"
+    },
+    {
+      "case": "rank_deficient",
+      "experiment_family": "TM-LS-03",
+      "experiment_id": "TM-LS-03",
+      "matrix": {
+        "dtype": "float64",
+        "frobenius_norm": 141.40120414591496,
+        "response_l2_norm": 140.3216220989406,
+        "sha256": "9c64bf34c114a36bb57cf2bbec8cae5be82ed34ebacd0f29c364a59578292aa2",
+        "shape": [
+          1000,
+          20
+        ]
+      },
+      "matrix_generation": {
+        "algorithm": "random_matrix_with_exact_duplicate_column",
+        "collinearity_epsilon": 0.0,
+        "duplicate_column_indices_zero_based": [
+          0,
+          19
+        ]
+      },
+      "methods": {
+        "normal_equations": {
+          "metrics": null,
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "failure",
+          "timing": {
+            "interquartile_range_seconds": null,
+            "median_seconds": null,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0018714,
+              0.0021965,
+              0.0006219,
+              0.0027493,
+              0.0004722,
+              0.0003592,
+              0.0009773,
+              0.0007607,
+              0.0005286,
+              0.0016314,
+              0.000595,
+              0.0004199,
+              0.0003763,
+              0.0023816,
+              0.0004488,
+              0.0003998,
+              0.0004741,
+              0.0003388,
+              0.0025298,
+              0.0004895
+            ],
+            "status": "incomplete_due_to_solver_failure",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0018714,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0021965,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006219,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0027493,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004722,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003592,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0009773,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007607,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005286,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0016314,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000595,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004199,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003763,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0023816,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004488,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003998,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004741,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003388,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0025298,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004895,
+                "error_message": "Singular matrix",
+                "error_type": "LinAlgError",
+                "status": "failure",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.000428,
+              "error_message": "Singular matrix",
+              "error_type": "LinAlgError",
+              "status": "failure",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0003359,
+              "error_message": "Singular matrix",
+              "error_type": "LinAlgError",
+              "status": "failure",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0004006,
+              "error_message": "Singular matrix",
+              "error_type": "LinAlgError",
+              "status": "failure",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_pivoted": {
+          "metrics": {
+            "coefficient_norm_2": 4.664294912850319,
+            "coefficients": [
+              -0.309331170579392,
+              1.2294328255524405,
+              -0.11774231191966135,
+              1.8075072632381526,
+              0.41930003849186853,
+              0.2971286878365818,
+              -1.5855585878227962,
+              -1.21057748270431,
+              0.601351414978657,
+              -1.014894411881625,
+              0.8711888053111808,
+              1.1938863745803892,
+              -1.1642094156809806,
+              -0.4886159597685997,
+              0.005292859654085934,
+              1.1745244302081714,
+              -1.4951281610505434,
+              0.6925812801247364,
+              -1.8328142167239256,
+              0.0
+            ],
+            "least_squares_gradient_norm_2": 1.2792278062049818e-12,
+            "reference_coefficient_norm_2": 4.6646225593668795,
+            "relative_coefficient_error_2": null,
+            "relative_residual": 0.000215679248774786,
+            "relative_stationarity_measure": 9.22103950655338e-13,
+            "residual_norm_2": 0.030264462041158915
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 19,
+            "method": "column_pivoted_qr_diagonal",
+            "rank_tolerance": 7.317077198993612e-12
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 0.00011037500000000001,
+            "median_seconds": 0.00061475,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0007496,
+              0.000783,
+              0.0006511,
+              0.0005968,
+              0.0006117,
+              0.0006077,
+              0.0006922,
+              0.0006724,
+              0.0005534,
+              0.0006178,
+              0.0006015,
+              0.0006346,
+              0.0007735,
+              0.0009194,
+              0.0005486,
+              0.00056,
+              0.0005943,
+              0.0006085,
+              0.0005891,
+              0.0007738
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0007496,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000783,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006511,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005968,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006117,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006077,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006922,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006724,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005534,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006178,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006015,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006346,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007735,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0009194,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005486,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.00056,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005943,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006085,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005891,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007738,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.001071,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0006797,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0006923,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "qr_unpivoted": {
+          "metrics": {
+            "coefficient_norm_2": 99548558784.79579,
+            "coefficients": [
+              70391460973.92209,
+              1.2294327499054405,
+              -0.11774242208240704,
+              1.8075072300175494,
+              0.4193000417721011,
+              0.29712893364822957,
+              -1.5855581250171202,
+              -1.2105780508962773,
+              0.6013514760109588,
+              -1.0148936807302107,
+              0.8711885855448837,
+              1.1938860225522676,
+              -1.164209562729105,
+              -0.4886161703296009,
+              0.00529328067656752,
+              1.1745245294193971,
+              -1.4951280121826012,
+              0.692581278309052,
+              -1.8328134141036334,
+              -70391460974.23143
+            ],
+            "least_squares_gradient_norm_2": 0.015605853375327066,
+            "reference_coefficient_norm_2": 4.6646225593668795,
+            "relative_coefficient_error_2": null,
+            "relative_residual": 0.00021572438759404959,
+            "relative_stationarity_measure": 0.011246791172193096,
+            "residual_norm_2": 0.030270795993497614
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": null,
+            "method": "not_estimated_by_solver",
+            "rank_tolerance": null
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 1.6049999999999984e-05,
+            "median_seconds": 0.00028025,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0003033,
+              0.0003004,
+              0.0002866,
+              0.000286,
+              0.0003184,
+              0.0002831,
+              0.0002765,
+              0.0003482,
+              0.0002786,
+              0.0002659,
+              0.0002935,
+              0.0002819,
+              0.0002668,
+              0.0002762,
+              0.0002538,
+              0.0002513,
+              0.0002741,
+              0.0002775,
+              0.0002829,
+              0.0002619
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0003033,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003004,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002866,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000286,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003184,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002831,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002765,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0003482,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002786,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002659,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002935,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002819,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002668,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002762,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002538,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002513,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002741,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002775,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002829,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0002619,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0005086,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0003635,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0003038,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "svd_pseudoinverse": {
+          "metrics": {
+            "coefficient_norm_2": 4.6591634600532466,
+            "coefficients": [
+              -0.15466558528969984,
+              1.2294328255524412,
+              -0.11774231191966066,
+              1.80750726323815,
+              0.4193000384918683,
+              0.29712868783658264,
+              -1.585558587822796,
+              -1.2105774827043096,
+              0.6013514149786551,
+              -1.0148944118816237,
+              0.8711888053111805,
+              1.1938863745803898,
+              -1.164209415680981,
+              -0.48861595976859773,
+              0.005292859654084187,
+              1.1745244302081712,
+              -1.4951281610505438,
+              0.6925812801247359,
+              -1.832814216723925,
+              -0.15466558528969998
+            ],
+            "least_squares_gradient_norm_2": 1.1925708218395371e-11,
+            "reference_coefficient_norm_2": 4.6646225593668795,
+            "relative_coefficient_error_2": null,
+            "relative_residual": 0.0002156792487747843,
+            "relative_stationarity_measure": 8.596391205072965e-12,
+            "residual_norm_2": 0.03026446204115868
+          },
+          "solver_rank_diagnostics": {
+            "estimated_rank": 19,
+            "method": "svd_singular_values",
+            "rank_tolerance": 1.0178300651290094e-11
+          },
+          "solver_status": "success",
+          "timing": {
+            "interquartile_range_seconds": 0.00010639999999999998,
+            "median_seconds": 0.00061225,
+            "performed": true,
+            "raw_execution_times_seconds": [
+              0.0004977,
+              0.0004691,
+              0.0005735,
+              0.0005937,
+              0.0006113,
+              0.0005771,
+              0.0005694,
+              0.0005857,
+              0.0006684,
+              0.0007601,
+              0.0006572,
+              0.0007325,
+              0.0007981,
+              0.0006132,
+              0.0006478,
+              0.000585,
+              0.0005309,
+              0.0006464,
+              0.0007252,
+              0.0008016
+            ],
+            "status": "complete",
+            "summary_note": "Summary statistics are only reported when every warm-up and timed solver attempt succeeds. Failed-attempt durations are retained but are not presented as comparable runtimes.",
+            "timed_repetitions": 20,
+            "timed_trials": [
+              {
+                "elapsed_seconds": 0.0004977,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0004691,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005735,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005937,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006113,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005771,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005694,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005857,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006684,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007601,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006572,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007325,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007981,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006132,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006478,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.000585,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0005309,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0006464,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0007252,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              },
+              {
+                "elapsed_seconds": 0.0008016,
+                "error_message": null,
+                "error_type": null,
+                "status": "success",
+                "warnings": []
+              }
+            ],
+            "warmup_runs": 3
+          },
+          "warmup_trials": [
+            {
+              "elapsed_seconds": 0.0009902,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0007896,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            },
+            {
+              "elapsed_seconds": 0.0005735,
+              "error_message": null,
+              "error_type": null,
+              "status": "success",
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        }
+      },
+      "noise": {
+        "measured_l2_norm": 0.030532499442621996,
+        "sha256": "bfcb3caea16d0f800f3ea9516be410d0de8d160a9ab171e1eca112eb98b8d575",
+        "standard_deviation": 0.001
+      },
+      "random_seed": 20261022,
+      "rank_diagnostics": {
+        "condition_number_status": "infinite_due_to_numerical_rank_deficiency",
+        "expectation_matches": true,
+        "expected_numerical_rank": 19,
+        "largest_singular_value": 45.838991020414944,
+        "maximum_rank": 20,
+        "measured_condition_number_2": null,
+        "numerical_rank": 19,
+        "rank_tolerance": 1.0178300651290094e-11,
+        "smallest_singular_value": 4.744737295285561e-15,
+        "target_condition_number_2": null
+      },
+      "reference_coefficients": [
+        -0.3137563121310843,
+        1.2294614853155617,
+        -0.11777057378936721,
+        1.8075501100451468,
+        0.419298309389236,
+        0.29720547112093554,
+        -1.5855486333277764,
+        -1.2105720838275356,
+        0.6013756465222925,
+        -1.0149129711787404,
+        0.8712082958787454,
+        1.1938806713781858,
+        -1.1642158970457328,
+        -0.4886132915777109,
+        0.005273083159633482,
+        1.1744852147074376,
+        -1.4951065937023857,
+        0.6925639026040389,
+        -1.8328496285797826,
+        0.004382656318450185
+      ],
+      "reference_coefficients_sha256": "ce1ab397e53dbbe27afb7edca688e4e94c003e66f764e09b861da16398d68bc8",
+      "response_sha256": "59ced0c067403308246cca33b837e9fac0e6d037fb24dff003a1d0c3d218199f"
+    }
+  ],
+  "parameters": {
+    "base_random_seed": 20261022,
+    "case_seed_policy": "The base seed is restarted independently for each case. Within the controlled-spectrum family, identical random factors, reference coefficients, and noise are reused across target condition numbers.",
+    "dtype": "float64",
+    "n_features": 20,
+    "n_samples": 1000,
+    "noise_standard_deviation": 0.001,
+    "target_condition_numbers": [
+      100.0,
+      10000.0,
+      1000000.0
+    ]
+  },
+  "performance_measurements": {
+    "interpretation": "Per-method timing summaries are omitted when a solver fails in any warm-up or timed attempt.",
+    "performed": true,
+    "timed_repetitions": 20,
+    "timer": "time.perf_counter_ns",
+    "timing_scope": "Public solver call on preconstructed inputs; includes solver input validation and memory preparation, but excludes matrix generation and post-solve metric calculations.",
+    "warmup_runs": 3
+  },
+  "purpose": "least_squares_numerical_accuracy_and_timing",
+  "schema_version": 1,
+  "suite_id": "TM-LS-COMPARISON-01"
+}
